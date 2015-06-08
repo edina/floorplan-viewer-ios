@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import "math.h"
 
 #define originShift (2 * M_PI * 6378137 / 2.0)

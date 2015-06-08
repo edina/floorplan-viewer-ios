@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 
+
 @interface FloorPlan_Tests : XCTestCase
 
 @end
@@ -22,11 +23,21 @@
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testConvertLatitudeAndLongitude {
     // This is an example of a functional test case.
+    Utils *utils = [[Utils alloc] init];
+    //edinburgh univerisity library
+    //55.942710, -3.18915
+    
+    
+    LatLon latLon ;
+    latLon = [utils convertLatitude:55.942710 andLongitude:-3.18915];
+    
+    NSLog(@"lat %f lon %f", latLon.lat, latLon.lon );
     XCTAssert(YES, @"Pass");
 }
 
