@@ -19,6 +19,6 @@ typedef struct {
 @interface Utils : NSObject
 
 - (LatLon) convertLatitude: (CGFloat)  latDecimalDegrees andLongitude: (CGFloat) lonDecimalDegrees;
-
+-(LatLon) convertToImagePixelslatInMeter:(CGFloat) y1 andLonInMeters:(CGFloat)  x1;
 
 @end
