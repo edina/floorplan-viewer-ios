@@ -6,31 +6,35 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A5250100-DC93-4723-9CE4-1777BE673C70</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FloorPlan</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>003C14072062B82308B514F809C23037FFFC6F8D</key>
-		<string>https://github.com/jessedc/JCTiledScrollView.git</string>
+		<key>396B174BC4ED51DB51F6AB526BAB6A0A8E65529A</key>
+		<string>https://github.com/edina/floorplan-viewer-ios.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FloorPlan/FloorPlan.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>003C14072062B82308B514F809C23037FFFC6F8D</key>
-		<string>JCTiledScrollView/</string>
+		<key>396B174BC4ED51DB51F6AB526BAB6A0A8E65529A</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jessedc/JCTiledScrollView.git</string>
+	<string>https://github.com/edina/floorplan-viewer-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>003C14072062B82308B514F809C23037FFFC6F8D</string>
+	<string>396B174BC4ED51DB51F6AB526BAB6A0A8E65529A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>003C14072062B82308B514F809C23037FFFC6F8D</string>
+			<string>396B174BC4ED51DB51F6AB526BAB6A0A8E65529A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>JCTiledScrollView</string>
+			<string>floorplan-viewer-ios</string>
 		</dict>
 	</array>
 </dict>
