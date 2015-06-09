@@ -56,7 +56,24 @@ bool AreSame(double a, double b)
     NSLog(@" Latitude %f ", latLon.lat);
     NSLog(@" Longitude %f ", latLon.lon);
     XCTAssertEqualWithAccuracy(7547019.280554745, latLon.lat, EPSILON,  @"Incorrect Latutide in m" );
-    XCTAssertEqualWithAccuracy(-355014.5540633685, latLon.lon, EPSILON,  @"Incorrect Logitude in m" );
+    XCTAssertEqualWithAccuracy(-355014.5540633685, latLon.lon, EPSILON,  @"Incorrect Longitude in m" );
+    
+}
+
+-(void) testLatLonToImagePixels {
+    Utils *utils = [[Utils alloc] init];
+    //bottom right of image
+    
+    CGFloat lat = 7546992.67;
+    CGFloat lon = -354927.1;
+    LatLon latLon = [utils convertToImagePixelslatInMeter:lat andLonInMeters:lon];
+    
+    
+    NSLog(@" Latitude %f ", latLon.lat);
+    NSLog(@" Longitude %f ", latLon.lon);
+    
+    XCTAssertEqualWithAccuracy(5073.129808, latLon.lon, EPSILON,  @"x pixels in image" );
+    XCTAssertEqualWithAccuracy(3745.075892, latLon.lat, EPSILON,  @"y pixels in image" );
     
 }
 
