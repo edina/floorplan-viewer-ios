@@ -14,7 +14,7 @@
 #import "DetailView.h"
 
 
-#define SkippingGirlImageSize CGSizeMake(707., 500.)
+#define GroundFloorImageSize CGSizeMake(707., 500.)
 
 #ifdef ANNOTATE_TILES
 #import "JCTiledView.h"
@@ -47,7 +47,7 @@
   //self.scrollView = [[JCTiledPDFScrollView alloc] initWithFrame:scrollView_frame URL:[[NSBundle mainBundle] URLForResource:@"Map" withExtension:@"pdf"]];
 
   //Bitmap
-  self.scrollView = [[JCTiledScrollView alloc] initWithFrame:scrollView_frame contentSize:SkippingGirlImageSize];
+  self.scrollView = [[JCTiledScrollView alloc] initWithFrame:scrollView_frame contentSize:GroundFloorImageSize];
 
   self.scrollView.dataSource = self;
   self.scrollView.tiledScrollViewDelegate = self;
@@ -122,7 +122,7 @@
     srand(42);
   });
 
-  CGSize size = SkippingGirlImageSize;  
+  CGSize size = GroundFloorImageSize;
   for (int i = 0; i < 5; i++)
   {
     id<JCAnnotation> a = [[DemoAnnotation alloc] init];
@@ -163,11 +163,11 @@
 
 #pragma mark - JCTileSource
 
-#define SkippingGirlImageName @"gf"
+#define GroundFLoorImageName @"gf"
 
 - (UIImage *)tiledScrollView:(JCTiledScrollView *)scrollView imageForRow:(NSInteger)row column:(NSInteger)column scale:(NSInteger)scale
 {
- return [UIImage imageNamed:[NSString stringWithFormat:@"tiles/%@_%dx_%d_%d.png", SkippingGirlImageName, scale, column, row]];
+ return [UIImage imageNamed:[NSString stringWithFormat:@"tiles/%@_%ldx_%ld_%ld.png", GroundFLoorImageName, (long)scale, (long)column, (long)row]];
 }
 
 - (void)tiledScrollView:(JCTiledScrollView *)scrollView didSelectAnnotationView:(JCAnnotationView *)view{

@@ -50,7 +50,7 @@
 /* Begin PBXFileReference section */
 		723C8D401B258FC70005297A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = utils/Utils.h; sourceTree = SOURCE_ROOT; };
 		723C8D411B258FC70005297A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = utils/Utils.m; sourceTree = SOURCE_ROOT; };
-		7DCF8BD81B26E6F6005FA939 /* FloorPlan Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FloorPlan Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FloorPlanIOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCF8BDB1B26E6F6005FA939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloorPlan_Tests.m; sourceTree = "<group>"; };
 		8809DC4C14D8E44A0003B4C6 /* tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tiles; path = ../tiles; sourceTree = "<group>"; };
@@ -60,14 +60,14 @@
 		88197C0F1558C251005EF22F /* marker-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker-red.png"; sourceTree = "<group>"; };
 		882BCF7515A431CF00F0FC5E /* DemoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAnnotation.h; sourceTree = "<group>"; };
 		882BCF7615A431CF00F0FC5E /* DemoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAnnotation.m; sourceTree = "<group>"; };
-		887EE94114D8DC2D00AB0A92 /* FloorPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloorPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		887EE94114D8DC2D00AB0A92 /* FloorPlanIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloorPlanIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		887EE94514D8DC2D00AB0A92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		887EE94714D8DC2D00AB0A92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		887EE94914D8DC2D00AB0A92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		887EE94D14D8DC2D00AB0A92 /* FloorPlan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FloorPlan-Info.plist"; sourceTree = "<group>"; };
+		887EE94D14D8DC2D00AB0A92 /* FloorPlanIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FloorPlanIOS-Info.plist"; sourceTree = "<group>"; };
 		887EE94F14D8DC2D00AB0A92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		887EE95114D8DC2D00AB0A92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		887EE95314D8DC2D00AB0A92 /* FloorPlan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FloorPlan-Prefix.pch"; sourceTree = "<group>"; };
+		887EE95314D8DC2D00AB0A92 /* FloorPlanIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FloorPlanIOS-Prefix.pch"; sourceTree = "<group>"; };
 		887EE95414D8DC2D00AB0A92 /* JCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCAppDelegate.h; sourceTree = "<group>"; };
 		887EE95514D8DC2D00AB0A92 /* JCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCAppDelegate.m; sourceTree = "<group>"; };
 		888630DD172938C600F8E5D4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 		887EE94214D8DC2D00AB0A92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				887EE94114D8DC2D00AB0A92 /* FloorPlan.app */,
-				7DCF8BD81B26E6F6005FA939 /* FloorPlan Tests.xctest */,
+				887EE94114D8DC2D00AB0A92 /* FloorPlanIOS.app */,
+				7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,10 +203,10 @@
 				88CD1A3714E2007F00B54AF0 /* Icon-72.png */,
 				88CD1A3814E2007F00B54AF0 /* Icon.png */,
 				88CD1A3914E2007F00B54AF0 /* Icon@2x.png */,
-				887EE94D14D8DC2D00AB0A92 /* FloorPlan-Info.plist */,
+				887EE94D14D8DC2D00AB0A92 /* FloorPlanIOS-Info.plist */,
 				887EE94E14D8DC2D00AB0A92 /* InfoPlist.strings */,
 				887EE95114D8DC2D00AB0A92 /* main.m */,
-				887EE95314D8DC2D00AB0A92 /* FloorPlan-Prefix.pch */,
+				887EE95314D8DC2D00AB0A92 /* FloorPlanIOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -214,9 +214,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DCF8BD71B26E6F6005FA939 /* FloorPlan Tests */ = {
+		7DCF8BD71B26E6F6005FA939 /* FloorPlanIOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "FloorPlan Tests" */;
+			buildConfigurationList = 7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "FloorPlanIOS Tests" */;
 			buildPhases = (
 				7DCF8BD41B26E6F6005FA939 /* Sources */,
 				7DCF8BD51B26E6F6005FA939 /* Frameworks */,
@@ -227,14 +227,14 @@
 			dependencies = (
 				7DCF8BDF1B26E6F6005FA939 /* PBXTargetDependency */,
 			);
-			name = "FloorPlan Tests";
+			name = "FloorPlanIOS Tests";
 			productName = "FloorPlan Tests";
-			productReference = 7DCF8BD81B26E6F6005FA939 /* FloorPlan Tests.xctest */;
+			productReference = 7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		887EE94014D8DC2D00AB0A92 /* FloorPlan */ = {
+		887EE94014D8DC2D00AB0A92 /* FloorPlanIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "FloorPlan" */;
+			buildConfigurationList = 887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "FloorPlanIOS" */;
 			buildPhases = (
 				887EE93D14D8DC2D00AB0A92 /* Sources */,
 				887EE93E14D8DC2D00AB0A92 /* Frameworks */,
@@ -244,9 +244,9 @@
 			);
 			dependencies = (
 			);
-			name = FloorPlan;
+			name = FloorPlanIOS;
 			productName = JCTiledViewDemo;
-			productReference = 887EE94114D8DC2D00AB0A92 /* FloorPlan.app */;
+			productReference = 887EE94114D8DC2D00AB0A92 /* FloorPlanIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -264,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "FloorPlan" */;
+			buildConfigurationList = 887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "FloorPlanIOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -282,8 +282,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				887EE94014D8DC2D00AB0A92 /* FloorPlan */,
-				7DCF8BD71B26E6F6005FA939 /* FloorPlan Tests */,
+				887EE94014D8DC2D00AB0A92 /* FloorPlanIOS */,
+				7DCF8BD71B26E6F6005FA939 /* FloorPlanIOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -351,7 +351,7 @@
 /* Begin PBXTargetDependency section */
 		7DCF8BDF1B26E6F6005FA939 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 887EE94014D8DC2D00AB0A92 /* FloorPlan */;
+			target = 887EE94014D8DC2D00AB0A92 /* FloorPlanIOS */;
 			targetProxy = 7DCF8BDE1B26E6F6005FA939 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -398,7 +398,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FloorPlanIOS Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlan.app/FloorPlan";
 			};
 			name = Debug;
@@ -431,7 +431,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FloorPlanIOS Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlan.app/FloorPlan";
 			};
 			name = Release;
@@ -504,14 +504,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlan-Prefix.pch";
+				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlanIOS-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ANNOTATE_TILES,
 				);
-				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlan-Info.plist";
+				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlanIOS-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = FloorPlan;
+				PRODUCT_NAME = FloorPlanIOS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -520,10 +520,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlan-Prefix.pch";
-				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlan-Info.plist";
+				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlanIOS-Prefix.pch";
+				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlanIOS-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = FloorPlan;
+				PRODUCT_NAME = FloorPlanIOS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -531,7 +531,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "FloorPlan Tests" */ = {
+		7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "FloorPlanIOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DCF8BE01B26E6F6005FA939 /* Debug */,
@@ -539,7 +539,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "FloorPlan" */ = {
+		887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "FloorPlanIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887EE95714D8DC2D00AB0A92 /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "FloorPlan" */ = {
+		887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "FloorPlanIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887EE95A14D8DC2D00AB0A92 /* Debug */,
