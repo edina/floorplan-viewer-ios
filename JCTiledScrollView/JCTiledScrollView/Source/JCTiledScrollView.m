@@ -159,6 +159,7 @@
   }
 }
 
+
 #pragma mark - 
 
 //FIXME: Jesse C - I don't like overloading this here, but the logic is in one place
@@ -424,17 +425,17 @@
 
 #pragma mark - JCTiledScrollView
 
-- (float)zoomScale
+- (CGFloat)zoomScale
 {
   return (float)_scrollView.zoomScale;
 }
 
-- (void)setZoomScale:(float)zoomScale
+- (void)setZoomScale:(CGFloat)zoomScale
 {
   [self setZoomScale:zoomScale animated:NO];
 }
 
-- (void)setZoomScale:(float)zoomScale animated:(BOOL)animated
+- (void)setZoomScale:(CGFloat)zoomScale animated:(BOOL)animated
 {
   [_scrollView setZoomScale:zoomScale animated:animated];
 }
@@ -565,6 +566,15 @@
 - (void)removeAllAnnotations
 {
   [self removeAnnotations:[_annotations allObjects]];
+}
+
+-(void) moveToPointX:(CGFloat)x andY:(CGFloat)y atZoomLevel:(CGFloat)zoomLevel{
+
+    [self setContentCenter:CGPointMake(x, y) animated:YES];
+    self.zoomScale =zoomLevel;
+
+
+
 }
 
 @end

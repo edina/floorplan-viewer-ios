@@ -80,8 +80,8 @@
 @property (nonatomic, assign) size_t levelsOfZoom;
 @property (nonatomic, assign) size_t levelsOfDetail;
 
-@property (nonatomic, assign) float zoomScale;
-- (void)setZoomScale:(float)zoomScale animated:(BOOL)animated;
+@property (nonatomic, assign) CGFloat zoomScale;
+- (void)setZoomScale:(CGFloat)zoomScale animated:(BOOL)animated;
 
 //Default gesture behvaiour
 @property (nonatomic, assign) BOOL centerSingleTap;
@@ -95,7 +95,7 @@
 
 - (void)setContentCenter:(CGPoint)center animated:(BOOL)animated;
 
-
+- (void) moveToPointX:(CGFloat) x andY: (CGFloat) y atZoomLevel:(CGFloat) zoomLevel;
 //Annotations
 - (JCAnnotationView *)dequeueReusableAnnotationViewWithReuseIdentifier:(NSString *)reuseIdentifier;
 - (void)refreshAnnotations;

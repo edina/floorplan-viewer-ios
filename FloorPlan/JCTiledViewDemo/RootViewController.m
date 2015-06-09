@@ -51,7 +51,7 @@
 
   self.scrollView.dataSource = self;
   self.scrollView.tiledScrollViewDelegate = self;
-  self.scrollView.zoomScale = 1.0f;
+  self.scrollView.zoomScale = 3.0f;
 
 #ifdef ANNOTATE_TILES
   self.scrollView.tiledView.shouldAnnotateRect = NO;
@@ -71,6 +71,11 @@
   [self.view addSubview:addButton];
 
   [self tiledScrollViewDidZoom:self.scrollView]; //force the detailView to update the frist time
+  
+  
+  CGFloat x = 5073.129808;
+  CGFloat y = 3745.075892;
+  [self.scrollView moveToPointX:x andY:y atZoomLevel:3.0f];
   [self addRandomAnnotations];
 }
 

@@ -399,7 +399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "FloorPlanIOS Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlan.app/FloorPlan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlanIOS.app/FloorPlanIOS";
 			};
 			name = Debug;
 		};
@@ -432,7 +432,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "FloorPlanIOS Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlan.app/FloorPlan";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlanIOS.app/FloorPlanIOS";
 			};
 			name = Release;
 		};
@@ -538,6 +538,7 @@
 				7DCF8BE11B26E6F6005FA939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "FloorPlanIOS" */ = {
 			isa = XCConfigurationList;
