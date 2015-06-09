@@ -2,19 +2,30 @@
 //  FloorPlan_Tests.m
 //  FloorPlan Tests
 //
-//  Created by murrayhking on 08/06/2015.
+//  Created by murray king on 09/06/2015.
 //  Copyright (c) 2015 JC Multimedia Design. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Utils.h"
 
+
+bool AreSame(double a, double b);
+
+
+#define EPSILON 1e-1
 
 @interface FloorPlan_Tests : XCTestCase
 
 @end
 
 @implementation FloorPlan_Tests
+
+bool AreSame(double a, double b)
+{
+    return fabs(a - b) < EPSILON;
+}
 
 - (void)setUp {
     [super setUp];
@@ -23,22 +34,30 @@
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
-    
     [super tearDown];
 }
 
-- (void)testConvertLatitudeAndLongitude {
+- (void)testLatLonToMeters {
     // This is an example of a functional test case.
+    
     Utils *utils = [[Utils alloc] init];
+    
     //edinburgh univerisity library
-    //55.942710, -3.18915
+    CGFloat lat = 55.942710;
+    CGFloat lon = -3.18915;
     
     
-    LatLon latLon ;
-    latLon = [utils convertLatitude:55.942710 andLongitude:-3.18915];
+    LatLon latLon;
+    latLon = [utils convertLatitude:lat andLongitude:lon];
     
-    NSLog(@"lat %f lon %f", latLon.lat, latLon.lon );
-    XCTAssert(YES, @"Pass");
+    
+    // assertEquals("lat in meters ", 7547019.280554745, latLon.getLat(), DELTA);
+    // assertEquals("lon in meters ", -355014.5540633685, latLon.getLon(), DELTA);
+    NSLog(@" Latitude %f ", latLon.lat);
+    NSLog(@" Longitude %f ", latLon.lon);
+    XCTAssertEqualWithAccuracy(7547019.280554745, latLon.lat, EPSILON,  @"Incorrect Latutide in m" );
+    XCTAssertEqualWithAccuracy(-355014.5540633685, latLon.lon, EPSILON,  @"Incorrect Logitude in m" );
+    
 }
 
 - (void)testPerformanceExample {
