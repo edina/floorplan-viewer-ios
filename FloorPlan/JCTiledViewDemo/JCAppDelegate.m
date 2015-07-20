@@ -25,9 +25,19 @@
    
     [self.beaconManager requestAlwaysAuthorization];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    // 2. Get storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    // 3. Create vc
+    RootViewController *tutorialViewController = [storyboard instantiateViewControllerWithIdentifier:@"intro"];
+    // 4. Set as root
+    self.window.rootViewController = tutorialViewController;
+    // 5. Call to show views
     [self.window makeKeyAndVisible];
+    
+    /*self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    [self.window makeKeyAndVisible];*/
     
     
     return YES;

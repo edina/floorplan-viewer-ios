@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		723C8D421B258FC70005297A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C8D411B258FC70005297A /* Utils.m */; };
+		7261250F1B5D965400EDF297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7261250E1B5D965400EDF297 /* Main.storyboard */; };
+		726125131B5DA82700EDF297 /* FloorPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726125121B5DA82700EDF297 /* FloorPlanViewController.m */; };
 		7DCF8BDD1B26E6F6005FA939 /* FloorPlan_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */; };
 		8809DC4D14D8E44A0003B4C6 /* tiles in Resources */ = {isa = PBXBuildFile; fileRef = 8809DC4C14D8E44A0003B4C6 /* tiles */; };
 		8809DC5014D8E4C40003B4C6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8809DC4F14D8E4C40003B4C6 /* RootViewController.m */; };
@@ -50,6 +52,9 @@
 /* Begin PBXFileReference section */
 		723C8D401B258FC70005297A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = utils/Utils.h; sourceTree = SOURCE_ROOT; };
 		723C8D411B258FC70005297A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = utils/Utils.m; sourceTree = SOURCE_ROOT; };
+		7261250E1B5D965400EDF297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		726125111B5DA82700EDF297 /* FloorPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorPlanViewController.h; sourceTree = "<group>"; };
+		726125121B5DA82700EDF297 /* FloorPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorPlanViewController.m; sourceTree = "<group>"; };
 		7C9FFBD40C7BD04927FF6A0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FloorPlanIOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCF8BDB1B26E6F6005FA939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 		887EE93614D8DC2D00AB0A92 = {
 			isa = PBXGroup;
 			children = (
+				7261250E1B5D965400EDF297 /* Main.storyboard */,
 				88C19C7F150C4D6E007184E6 /* README.md */,
 				887EE94B14D8DC2D00AB0A92 /* JCTiledViewDemo */,
 				88AFB19A15DF75F2003BD3AB /* JCTiledScrollView.xcodeproj */,
@@ -201,6 +207,8 @@
 				882BCF7515A431CF00F0FC5E /* DemoAnnotation.h */,
 				882BCF7615A431CF00F0FC5E /* DemoAnnotation.m */,
 				887EE94C14D8DC2D00AB0A92 /* Supporting Files */,
+				726125111B5DA82700EDF297 /* FloorPlanViewController.h */,
+				726125121B5DA82700EDF297 /* FloorPlanViewController.m */,
 			);
 			path = JCTiledViewDemo;
 			sourceTree = "<group>";
@@ -326,6 +334,7 @@
 			files = (
 				887EE95014D8DC2D00AB0A92 /* InfoPlist.strings in Resources */,
 				8809DC4D14D8E44A0003B4C6 /* tiles in Resources */,
+				7261250F1B5D965400EDF297 /* Main.storyboard in Resources */,
 				88CD1A3A14E2007F00B54AF0 /* Icon-72.png in Resources */,
 				88CD1A3B14E2007F00B54AF0 /* Icon.png in Resources */,
 				88CD1A3C14E2007F00B54AF0 /* Icon@2x.png in Resources */,
@@ -383,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726125131B5DA82700EDF297 /* FloorPlanViewController.m in Sources */,
 				887EE95214D8DC2D00AB0A92 /* main.m in Sources */,
 				887EE95614D8DC2D00AB0A92 /* JCAppDelegate.m in Sources */,
 				8809DC5014D8E4C40003B4C6 /* RootViewController.m in Sources */,
@@ -562,6 +572,7 @@
 					ANNOTATE_TILES,
 				);
 				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlanIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -583,6 +594,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlanIOS-Prefix.pch";
 				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlanIOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",

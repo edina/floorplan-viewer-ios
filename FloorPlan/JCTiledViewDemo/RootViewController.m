@@ -24,16 +24,17 @@
 
 
 #pragma mark - View lifecycle
-
+/*
 - (void)loadView
 {
   UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 460.0f)];
   view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
   self.view = view;
-}
+}*/
 
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad {
+
   [super viewDidLoad];
   self.detailView = [[DetailView alloc] initWithFrame:CGRectZero];
   self.detailView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
