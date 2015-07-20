@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		723C8D421B258FC70005297A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C8D411B258FC70005297A /* Utils.m */; };
+		724EA4B31B5D134C00D853EC /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724EA4B21B5D134C00D853EC /* EstimoteSDK.framework */; };
 		7DCF8BDD1B26E6F6005FA939 /* FloorPlan_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */; };
 		8809DC4D14D8E44A0003B4C6 /* tiles in Resources */ = {isa = PBXBuildFile; fileRef = 8809DC4C14D8E44A0003B4C6 /* tiles */; };
 		8809DC5014D8E4C40003B4C6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8809DC4F14D8E4C40003B4C6 /* RootViewController.m */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		723C8D401B258FC70005297A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = utils/Utils.h; sourceTree = SOURCE_ROOT; };
 		723C8D411B258FC70005297A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = utils/Utils.m; sourceTree = SOURCE_ROOT; };
+		724EA4B21B5D134C00D853EC /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FloorPlanIOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCF8BDB1B26E6F6005FA939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloorPlan_Tests.m; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				887EE94614D8DC2D00AB0A92 /* UIKit.framework in Frameworks */,
 				887EE94814D8DC2D00AB0A92 /* Foundation.framework in Frameworks */,
 				887EE94A14D8DC2D00AB0A92 /* CoreGraphics.framework in Frameworks */,
+				724EA4B31B5D134C00D853EC /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +168,7 @@
 		887EE94414D8DC2D00AB0A92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				724EA4B21B5D134C00D853EC /* EstimoteSDK.framework */,
 				88AFB16915DF56F5003BD3AB /* libJCTiledScrollView.a */,
 				8809DC5114D8E8560003B4C6 /* QuartzCore.framework */,
 				887EE94514D8DC2D00AB0A92 /* UIKit.framework */,
@@ -503,6 +507,10 @@
 		887EE95A14D8DC2D00AB0A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlanIOS-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -519,6 +527,10 @@
 		887EE95B14D8DC2D00AB0A92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlanIOS-Prefix.pch";
 				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlanIOS-Info.plist";
