@@ -25,22 +25,44 @@
    
     [self.beaconManager requestAlwaysAuthorization];
     
+    
+    [[UIApplication sharedApplication]
+ registerUserNotificationSettings:[UIUserNotificationSettings
+                                   settingsForTypes:UIUserNotificationTypeAlert
+                                   categories:nil]];
+    
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     // 2. Get storyboard
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     // 3. Create vc
-    RootViewController *tutorialViewController = [storyboard instantiateViewControllerWithIdentifier:@"intro"];
+    RootViewController *floorPlanVC = [storyboard instantiateViewControllerWithIdentifier:@"floorplan"];
     // 4. Set as root
-    self.window.rootViewController = tutorialViewController;
+    self.window.rootViewController = floorPlanVC;
     // 5. Call to show views
     [self.window makeKeyAndVisible];
     
-    /*self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
-    [self.window makeKeyAndVisible];*/
+    CLBeaconRegion *lightBlue = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc]
+        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
+    major:51613 minor:27600 identifier:@"monitored region"];
+    CLBeaconRegion *lightGreen = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc]
+        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
+    major:31179 minor:43808 identifier:@"monitored region"];
     
+    [self.beaconManager startMonitoringForRegion:lightBlue];
+    
+    [self.beaconManager startMonitoringForRegion:lightGreen];
     
     return YES;
+}
+
+- (void)beaconManager:(id)manager didEnterRegion:(CLBeaconRegion *)region {
+    UILocalNotification *notification = [UILocalNotification new];
+    notification.alertBody =
+        @"Your gate closes in 47 minutes. "
+         "Current security wait time is 15 minutes, "
+         "and it's a 5 minute walk from security to the gate. "
+         "Looks like you've got plenty of time!";
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
