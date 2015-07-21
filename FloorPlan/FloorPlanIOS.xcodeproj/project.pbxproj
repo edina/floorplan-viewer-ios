@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11FCBB3EB4C9F12BD8F9EC3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		723C8D401B258FC70005297A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = utils/Utils.h; sourceTree = SOURCE_ROOT; };
 		723C8D411B258FC70005297A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = utils/Utils.m; sourceTree = SOURCE_ROOT; };
 		7261250E1B5D965400EDF297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 				887EE94514D8DC2D00AB0A92 /* UIKit.framework */,
 				887EE94714D8DC2D00AB0A92 /* Foundation.framework */,
 				887EE94914D8DC2D00AB0A92 /* CoreGraphics.framework */,
+				11FCBB3EB4C9F12BD8F9EC3B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

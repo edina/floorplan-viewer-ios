@@ -29,7 +29,7 @@
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We use low-energy Bluetooth and iBeacon devices installed at the library to provide relevant information</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Storyboard</string>
+	<string>Main</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
