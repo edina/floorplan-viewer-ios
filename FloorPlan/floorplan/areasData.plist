@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict/>
+
+<dict>
+	<key>routes</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>1 Entrance</string>
+			<key>description</key>
+			<string>The Main Library was designed by Sir Basil Spence. It was built in 1967.  and A-listed in 2005. Major redevelopment began in 2007, and was completed in Spring 2013.</string>
+			<key>image</key>
+			<string>image_1.jpg</string>
+			<key>location</key>
+			<string>3976,957</string>
+		</dict>
+        <dict>
+            <key>title</key>
+            <string>2 Reception Desk</string>
+			<key>description</key>
+			<string>Staffed by both Library Helpdesk and Library Facilities staff. If you are visiting the library, or have lost your University card, this desk will be your first port of call.</string>
+			<key>image</key>
+			<string>image_2.jpg</string>
+			<key>location</key>
+			<string>5120,1056</string>
+        </dict>
+
+	</array>
+    
+</dict>
+</plist>
