@@ -9,6 +9,7 @@
 #import "AreasListTableVC.h"
 #import "Area.h"
 #import "AreaTableViewCell.h"
+#import "RootViewController.h"
 
 @implementation AreasListTableVC
 
@@ -30,7 +31,7 @@
     for (NSDictionary *r in areas) {
         
         
-        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"description"]];
+        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"]];
 
         
         [self.areas addObject:area];
@@ -62,6 +63,27 @@
     cell.areaDetail.text = area.desc;
     return cell;
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([sender isKindOfClass:[UITableViewCell class]]){
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+   
+        
+        if(indexPath) {
+            Area *area = [self.areas objectAtIndex:indexPath.row];
+            if([segue.identifier isEqualToString:@"floorplan"]){
+ 
+                
+                RootViewController *controller = [segue destinationViewController];
+                controller.area = area;
+
+                
+            }
+        }
+    }
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

@@ -7,6 +7,7 @@
 //
 
 #import "JCTiledScrollView.h"
+#import "Area.h"
 
 @class DetailView, JCTiledScrollView;
 
@@ -14,5 +15,6 @@
 
 @property (strong, nonatomic) JCTiledScrollView *scrollView;
 @property (strong, nonatomic) DetailView *detailView;
+@property (strong, nonatomic) Area *area;
 
 @end

@@ -16,6 +16,7 @@
 
 
 #define GroundFloorImageSize CGSizeMake(707., 500.)
+#define MAX_ZOOM_LEVEL 8.
 
 #ifdef ANNOTATE_TILES
 #import "JCTiledView.h"
@@ -119,11 +120,27 @@
     
     [self tiledScrollViewDidZoom:self.scrollView]; //force the detailView to update the frist time
     
+    NSArray *coords = [self.area.location componentsSeparatedByString:@","];
     
-    CGFloat x = 5073.129808;
-    CGFloat y = 3745.075892;
-    [self.scrollView moveToPointX:x andY:y atZoomLevel:3.0f];
-    [self addRandomAnnotations];
+    CGFloat x = [coords[0] doubleValue];
+    CGFloat y =  [coords[1] doubleValue];
+    
+    
+    
+   
+    x = x/MAX_ZOOM_LEVEL;
+    y = y/MAX_ZOOM_LEVEL;
+    
+    //[self.scrollView moveToPointX:x andY:y atZoomLevel:3.0f];
+    
+    
+    id<JCAnnotation> a = [[DemoAnnotation alloc] init];
+    a.contentPosition = CGPointMake(x,y );
+    [self.scrollView addAnnotation:a];
+    self.scrollView.zoomScale = 6;
+      [self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
+    
+    //[self addRandomAnnotations];
 }
 
 - (void)viewDidUnload

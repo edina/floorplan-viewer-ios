@@ -56,7 +56,7 @@
                                     <outlet property="areaDetail" destination="VYg-F6-Do2" id="IdM-EI-pW3"/>
                                     <outlet property="areaImage" destination="VFc-Aw-5cr" id="CEc-U9-03x"/>
                                     <outlet property="areaTitle" destination="1al-UX-KUP" id="o0m-h4-vU1"/>
-                                    <segue destination="8E7-2h-y8M" kind="show" id="hKF-VR-0Ic"/>
+                                    <segue destination="8E7-2h-y8M" kind="show" identifier="floorplan" id="hKF-VR-0Ic"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unl-O3-gqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="359"/>
+            <point key="canvasLocation" x="1364" y="227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9ZM-qS-BRw">
