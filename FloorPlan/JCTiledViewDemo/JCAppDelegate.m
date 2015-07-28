@@ -35,7 +35,7 @@
     // 2. Get storyboard
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     // 3. Create vc
-    RootViewController *floorPlanVC = [storyboard instantiateViewControllerWithIdentifier:@"floorplan"];
+    RootViewController *floorPlanVC = [storyboard instantiateViewControllerWithIdentifier:@"areas-list"];
     // 4. Set as root
     self.window.rootViewController = floorPlanVC;
     // 5. Call to show views
