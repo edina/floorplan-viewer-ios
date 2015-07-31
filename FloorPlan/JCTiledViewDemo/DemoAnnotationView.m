@@ -10,25 +10,27 @@
 
 @implementation DemoAnnotationView
 
-- (id)initWithFrame:(CGRect)frame annotation:(id<JCAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithFrame:(CGRect)frame annotation:(id<JCAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier withView:(UIView *) view
 {
   if ((self = [super initWithFrame:frame annotation:annotation reuseIdentifier:reuseIdentifier]))
   {
-    _imageView = [[UIImageView alloc] init];
-    [self addSubview:_imageView];
+    self.callout = view;
+    [self addSubview:view];
   }
   return self;
 }
 
+
 - (CGSize)sizeThatFits:(CGSize)size
 {
-  return CGSizeMake(MAX(_imageView.image.size.width,30.f), MAX(_imageView.image.size.height,30.f));
+  return CGSizeMake(MAX(_callout.frame.size.width,30.f), MAX(_callout.frame.size.height,30.f));
 }
+
 
 - (void)layoutSubviews
 {
-  [_imageView sizeToFit];
-  _imageView.frame  = CGRectMake(0.f,0.f,CGRectGetWidth(_imageView.frame), CGRectGetHeight(_imageView.frame));
+  [_callout sizeToFit];
+  _callout.frame  = CGRectMake(0.f,0.f,CGRectGetWidth(_callout.frame), CGRectGetHeight(_callout.frame));
 }
 
 @end

@@ -49,6 +49,13 @@
     [super viewDidLoad];
     
     
+    [self.moreInfoButton addTarget:self
+             action:@selector(myAction) 
+   forControlEvents:UIControlEventTouchUpInside];
+   
+   self.moreInfoButton.userInteractionEnabled = YES;
+    
+    
       self.placesByBeacons = @{
         @"6574:54631": @{
             @"Heavenly Sandwiches": @50, // read as: it's 50 meters from
@@ -131,17 +138,24 @@
     x = x/MAX_ZOOM_LEVEL;
     y = y/MAX_ZOOM_LEVEL;
     
-    //[self.scrollView moveToPointX:x andY:y atZoomLevel:3.0f];
+    [self.scrollView moveToPointX:x andY:y atZoomLevel:3.0f];
     
     
     id<JCAnnotation> a = [[DemoAnnotation alloc] init];
     a.contentPosition = CGPointMake(x,y );
     [self.scrollView addAnnotation:a];
-    self.scrollView.zoomScale = 6;
-      [self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
-    
+    //self.scrollView.zoomScale = 6;
+    //[self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
+    [self.scrollView moveToPointX:x andY:y atZoomLevel:6];
     //[self addRandomAnnotations];
 }
+
+-(void) myAction {
+NSLog(@"test");
+
+
+}
+
 
 - (void)viewDidUnload
 {
@@ -232,8 +246,7 @@
     
     if (!view)
     {
-        view = [[DemoAnnotationView alloc] initWithFrame:CGRectZero annotation:annotation reuseIdentifier:@"Identifier"];
-        view.imageView.image = [UIImage imageNamed:@"marker-red.png"];
+        view = [[DemoAnnotationView alloc] initWithFrame:CGRectZero annotation:annotation reuseIdentifier:@"Identifier" withView: self.callout];
         [view sizeToFit];
     }
     
@@ -278,4 +291,10 @@
 
 
 
+
+
+- (IBAction)moreInfo:(id)sender {
+
+    int i =0;
+}
 @end

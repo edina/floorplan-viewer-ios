@@ -26,10 +26,10 @@
     [self.beaconManager requestAlwaysAuthorization];
     
     
-    [[UIApplication sharedApplication]
+    /*[[UIApplication sharedApplication]
  registerUserNotificationSettings:[UIUserNotificationSettings
                                    settingsForTypes:UIUserNotificationTypeAlert
-                                   categories:nil]];
+                                   categories:nil]];*/
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     // 2. Get storyboard

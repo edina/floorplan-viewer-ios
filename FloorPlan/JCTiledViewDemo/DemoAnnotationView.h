@@ -10,6 +10,8 @@
 
 @interface DemoAnnotationView : JCAnnotationView
 
-@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UIView *callout;
+
+- (id)initWithFrame:(CGRect)frame annotation:(id<JCAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier withView:(UIView *) view;
 
 @end
