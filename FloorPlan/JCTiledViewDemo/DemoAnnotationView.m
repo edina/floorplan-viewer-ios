@@ -7,10 +7,11 @@
 //
 
 #import "DemoAnnotationView.h"
+#import "CustomAnnotationView.h"
 
 @implementation DemoAnnotationView
 
-- (id)initWithFrame:(CGRect)frame annotation:(id<JCAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier withView:(UIView *) view
+- (id)initWithFrame:(CGRect)frame annotation:(id<JCAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier withView:(CustomAnnotationView *) view
 {
   if ((self = [super initWithFrame:frame annotation:annotation reuseIdentifier:reuseIdentifier]))
   {

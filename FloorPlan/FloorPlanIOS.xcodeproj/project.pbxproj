@@ -16,6 +16,7 @@
 		7D74927F1B6676BC003FE464 /* image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D74927D1B6676BC003FE464 /* image_2.jpg */; };
 		7D7492841B667B03003FE464 /* Area.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7492831B667B03003FE464 /* Area.m */; };
 		7DCF8BDD1B26E6F6005FA939 /* FloorPlan_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */; };
+		7DEA79ED1B7A0B2600A362EC /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA79EC1B7A0B2600A362EC /* CustomAnnotationView.m */; };
 		7DF989A41B67929F00D048ED /* AreaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF989A31B67929F00D048ED /* AreaTableViewCell.m */; };
 		8809DC4D14D8E44A0003B4C6 /* tiles in Resources */ = {isa = PBXBuildFile; fileRef = 8809DC4C14D8E44A0003B4C6 /* tiles */; };
 		8809DC5014D8E4C40003B4C6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8809DC4F14D8E4C40003B4C6 /* RootViewController.m */; };
@@ -73,6 +74,8 @@
 		7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FloorPlanIOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCF8BDB1B26E6F6005FA939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloorPlan_Tests.m; sourceTree = "<group>"; };
+		7DEA79EB1B7A0B2600A362EC /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotationView.h; path = floorplan/CustomAnnotationView.h; sourceTree = "<group>"; };
+		7DEA79EC1B7A0B2600A362EC /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAnnotationView.m; path = floorplan/CustomAnnotationView.m; sourceTree = "<group>"; };
 		7DF989A21B67929F00D048ED /* AreaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaTableViewCell.h; path = floorplan/AreaTableViewCell.h; sourceTree = "<group>"; };
 		7DF989A31B67929F00D048ED /* AreaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaTableViewCell.m; path = floorplan/AreaTableViewCell.m; sourceTree = "<group>"; };
 		82C6414149D8EDC04A2EB377 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				7D7492831B667B03003FE464 /* Area.m */,
 				7DF989A21B67929F00D048ED /* AreaTableViewCell.h */,
 				7DF989A31B67929F00D048ED /* AreaTableViewCell.m */,
+				7DEA79EB1B7A0B2600A362EC /* CustomAnnotationView.h */,
+				7DEA79EC1B7A0B2600A362EC /* CustomAnnotationView.m */,
 			);
 			name = FloorPlan;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				887EE95614D8DC2D00AB0A92 /* JCAppDelegate.m in Sources */,
 				8809DC5014D8E4C40003B4C6 /* RootViewController.m in Sources */,
 				88E49D3814E2788400D688DF /* DetailView.m in Sources */,
+				7DEA79ED1B7A0B2600A362EC /* CustomAnnotationView.m in Sources */,
 				88C778B9155B1F6D005E5DAD /* DemoAnnotationView.m in Sources */,
 				723C8D421B258FC70005297A /* Utils.m in Sources */,
 				7DF989A41B67929F00D048ED /* AreaTableViewCell.m in Sources */,

@@ -7,10 +7,11 @@
 //
 
 #import "JCAnnotationView.h"
-
+#import "CustomAnnotationView.h"
 @interface DemoAnnotationView : JCAnnotationView
 
-@property (strong, nonatomic) UIView *callout;
+
+@property (strong, nonatomic) CustomAnnotationView *callout;
 
 - (id)initWithFrame:(CGRect)frame annotation:(id<JCAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier withView:(UIView *) view;
 

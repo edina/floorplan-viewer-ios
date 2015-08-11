@@ -49,12 +49,7 @@
     [super viewDidLoad];
     
     
-    [self.moreInfoButton addTarget:self
-             action:@selector(myAction) 
-   forControlEvents:UIControlEventTouchUpInside];
-   
-   self.moreInfoButton.userInteractionEnabled = YES;
-    
+
     
       self.placesByBeacons = @{
         @"6574:54631": @{
@@ -150,11 +145,6 @@
     //[self addRandomAnnotations];
 }
 
--(void) myAction {
-NSLog(@"test");
-
-
-}
 
 
 - (void)viewDidUnload
@@ -247,6 +237,7 @@ NSLog(@"test");
     if (!view)
     {
         view = [[DemoAnnotationView alloc] initWithFrame:CGRectZero annotation:annotation reuseIdentifier:@"Identifier" withView: self.callout];
+        view.button = self.callout.moreInfoButton;
         [view sizeToFit];
     }
     
@@ -264,6 +255,7 @@ NSLog(@"test");
 
 - (void)tiledScrollView:(JCTiledScrollView *)scrollView didSelectAnnotationView:(JCAnnotationView *)view{
     NSLog(@" view %@", view );
+   [self performSegueWithIdentifier:@"showDetail" sender:self];
     
 }
 
@@ -293,8 +285,5 @@ NSLog(@"test");
 
 
 
-- (IBAction)moreInfo:(id)sender {
 
-    int i =0;
-}
 @end
