@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		722A942E1B7B4947008963D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722A942D1B7B4947008963D3 /* DetailViewController.m */; };
 		723C8D421B258FC70005297A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C8D411B258FC70005297A /* Utils.m */; };
 		7261250F1B5D965400EDF297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7261250E1B5D965400EDF297 /* Main.storyboard */; };
 		726125131B5DA82700EDF297 /* FloorPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726125121B5DA82700EDF297 /* FloorPlanViewController.m */; };
@@ -58,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		11FCBB3EB4C9F12BD8F9EC3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		722A942C1B7B4947008963D3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = floorplan/DetailViewController.h; sourceTree = "<group>"; };
+		722A942D1B7B4947008963D3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = floorplan/DetailViewController.m; sourceTree = "<group>"; };
 		723C8D401B258FC70005297A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = utils/Utils.h; sourceTree = SOURCE_ROOT; };
 		723C8D411B258FC70005297A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = utils/Utils.m; sourceTree = SOURCE_ROOT; };
 		7261250E1B5D965400EDF297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 		7D7492741B666E7B003FE464 /* FloorPlan */ = {
 			isa = PBXGroup;
 			children = (
+				722A942C1B7B4947008963D3 /* DetailViewController.h */,
+				722A942D1B7B4947008963D3 /* DetailViewController.m */,
 				7D74927B1B667683003FE464 /* images */,
 				7D7492761B666EFE003FE464 /* AreasListTableVC.h */,
 				7D7492771B666EFE003FE464 /* AreasListTableVC.m */,
@@ -451,6 +456,7 @@
 				7DEA79ED1B7A0B2600A362EC /* CustomAnnotationView.m in Sources */,
 				88C778B9155B1F6D005E5DAD /* DemoAnnotationView.m in Sources */,
 				723C8D421B258FC70005297A /* Utils.m in Sources */,
+				722A942E1B7B4947008963D3 /* DetailViewController.m in Sources */,
 				7DF989A41B67929F00D048ED /* AreaTableViewCell.m in Sources */,
 				7D7492781B666EFE003FE464 /* AreasListTableVC.m in Sources */,
 				882BCF7715A431CF00F0FC5E /* DemoAnnotation.m in Sources */,
