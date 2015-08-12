@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		722A942E1B7B4947008963D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722A942D1B7B4947008963D3 /* DetailViewController.m */; };
+		722A94331B7B969A008963D3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722A94321B7B969A008963D3 /* MediaPlayer.framework */; };
 		723C8D421B258FC70005297A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C8D411B258FC70005297A /* Utils.m */; };
 		7261250F1B5D965400EDF297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7261250E1B5D965400EDF297 /* Main.storyboard */; };
 		726125131B5DA82700EDF297 /* FloorPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726125121B5DA82700EDF297 /* FloorPlanViewController.m */; };
@@ -62,6 +63,7 @@
 		722A942C1B7B4947008963D3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = floorplan/DetailViewController.h; sourceTree = "<group>"; };
 		722A942D1B7B4947008963D3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = floorplan/DetailViewController.m; sourceTree = "<group>"; };
 		722A94311B7B93CF008963D3 /* dolly.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dolly.mp4; path = floorplan/video/dolly.mp4; sourceTree = "<group>"; };
+		722A94321B7B969A008963D3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		723C8D401B258FC70005297A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = utils/Utils.h; sourceTree = SOURCE_ROOT; };
 		723C8D411B258FC70005297A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = utils/Utils.m; sourceTree = SOURCE_ROOT; };
 		7261250E1B5D965400EDF297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				722A94331B7B969A008963D3 /* MediaPlayer.framework in Frameworks */,
 				8847303317294A4600FE980B /* libJCTiledScrollView.a in Frameworks */,
 				8809DC5214D8E8560003B4C6 /* QuartzCore.framework in Frameworks */,
 				887EE94614D8DC2D00AB0A92 /* UIKit.framework in Frameworks */,
@@ -244,6 +247,7 @@
 		887EE94414D8DC2D00AB0A92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				722A94321B7B969A008963D3 /* MediaPlayer.framework */,
 				88AFB16915DF56F5003BD3AB /* libJCTiledScrollView.a */,
 				8809DC5114D8E8560003B4C6 /* QuartzCore.framework */,
 				887EE94514D8DC2D00AB0A92 /* UIKit.framework */,
