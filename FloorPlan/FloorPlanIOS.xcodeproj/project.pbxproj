@@ -61,6 +61,7 @@
 		11FCBB3EB4C9F12BD8F9EC3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		722A942C1B7B4947008963D3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = floorplan/DetailViewController.h; sourceTree = "<group>"; };
 		722A942D1B7B4947008963D3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = floorplan/DetailViewController.m; sourceTree = "<group>"; };
+		722A94311B7B93CF008963D3 /* dolly.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dolly.mp4; path = floorplan/video/dolly.mp4; sourceTree = "<group>"; };
 		723C8D401B258FC70005297A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = utils/Utils.h; sourceTree = SOURCE_ROOT; };
 		723C8D411B258FC70005297A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = utils/Utils.m; sourceTree = SOURCE_ROOT; };
 		7261250E1B5D965400EDF297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -145,6 +146,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		722A94301B7B93A8008963D3 /* videos */ = {
+			isa = PBXGroup;
+			children = (
+				722A94311B7B93CF008963D3 /* dolly.mp4 */,
+			);
+			name = videos;
+			sourceTree = "<group>";
+		};
 		723C8D3E1B258F850005297A /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +166,7 @@
 		7D7492741B666E7B003FE464 /* FloorPlan */ = {
 			isa = PBXGroup;
 			children = (
+				722A94301B7B93A8008963D3 /* videos */,
 				722A942C1B7B4947008963D3 /* DetailViewController.h */,
 				722A942D1B7B4947008963D3 /* DetailViewController.m */,
 				7D74927B1B667683003FE464 /* images */,
