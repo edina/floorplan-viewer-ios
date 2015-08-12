@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface DetailViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self playMovie:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,17 +29,14 @@
 
 - (IBAction)playMovie:(id)sender
 {
-    VideoView *videoView = [[VideoView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
-    
-    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp4"];
+    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"dolly" ofType:@"mp4"];
     NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
-    moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:videoURL];
-    //[moviePlayer.view setFrame:CGRectMake(0, 0, 320, 476)];
-    [moviePlayer.view setFrame:videoView.bounds];
-    [videoView addSubview:moviePlayer.view];
     
-    [moviePlayer prepareToPlay];
-    [moviePlayer play];
+
+    self.movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
+    [self presentMoviePlayerViewControllerAnimated:self.movieController];
+    [self.movieController.moviePlayer play];
+
     
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		722A942E1B7B4947008963D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722A942D1B7B4947008963D3 /* DetailViewController.m */; };
 		722A94331B7B969A008963D3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722A94321B7B969A008963D3 /* MediaPlayer.framework */; };
+		722A94341B7BA261008963D3 /* dolly.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 722A94311B7B93CF008963D3 /* dolly.mp4 */; };
 		723C8D421B258FC70005297A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C8D411B258FC70005297A /* Utils.m */; };
 		7261250F1B5D965400EDF297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7261250E1B5D965400EDF297 /* Main.storyboard */; };
 		726125131B5DA82700EDF297 /* FloorPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726125121B5DA82700EDF297 /* FloorPlanViewController.m */; };
@@ -37,7 +38,6 @@
 		88CD1A3A14E2007F00B54AF0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 88CD1A3714E2007F00B54AF0 /* Icon-72.png */; };
 		88CD1A3B14E2007F00B54AF0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88CD1A3814E2007F00B54AF0 /* Icon.png */; };
 		88CD1A3C14E2007F00B54AF0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88CD1A3914E2007F00B54AF0 /* Icon@2x.png */; };
-		88DCC88314F3BEF800B206F5 /* Map.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 88DCC88214F3BEF800B206F5 /* Map.pdf */; };
 		88E49D3814E2788400D688DF /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E49D3714E2788400D688DF /* DetailView.m */; };
 /* End PBXBuildFile section */
 
@@ -398,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				722A94341B7BA261008963D3 /* dolly.mp4 in Resources */,
 				887EE95014D8DC2D00AB0A92 /* InfoPlist.strings in Resources */,
 				8809DC4D14D8E44A0003B4C6 /* tiles in Resources */,
 				7D74927F1B6676BC003FE464 /* image_2.jpg in Resources */,
@@ -406,7 +407,6 @@
 				88CD1A3A14E2007F00B54AF0 /* Icon-72.png in Resources */,
 				88CD1A3B14E2007F00B54AF0 /* Icon.png in Resources */,
 				88CD1A3C14E2007F00B54AF0 /* Icon@2x.png in Resources */,
-				88DCC88314F3BEF800B206F5 /* Map.pdf in Resources */,
 				88197C101558C251005EF22F /* marker-red.png in Resources */,
 				888630DE172938C600F8E5D4 /* Default-568h@2x.png in Resources */,
 				7D74927A1B6670C9003FE464 /* areas_config.plist in Resources */,
