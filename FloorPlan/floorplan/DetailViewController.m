@@ -29,13 +29,7 @@
 
 - (IBAction)playMovie:(id)sender
 {
-    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"dolly" ofType:@"mp4"];
-    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
-    
 
-    self.movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
-    [self presentMoviePlayerViewControllerAnimated:self.movieController];
-    [self.movieController.moviePlayer play];
 
     
 }

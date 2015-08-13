@@ -13,6 +13,7 @@
 		723C8D421B258FC70005297A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C8D411B258FC70005297A /* Utils.m */; };
 		7261250F1B5D965400EDF297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7261250E1B5D965400EDF297 /* Main.storyboard */; };
 		726125131B5DA82700EDF297 /* FloorPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726125121B5DA82700EDF297 /* FloorPlanViewController.m */; };
+		7D05E12D1B7CCF6600D4A4CA /* TriangleDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D05E12C1B7CCF6600D4A4CA /* TriangleDown.png */; };
 		7D7492781B666EFE003FE464 /* AreasListTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7492771B666EFE003FE464 /* AreasListTableVC.m */; };
 		7D74927A1B6670C9003FE464 /* areas_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D7492791B6670C9003FE464 /* areas_config.plist */; };
 		7D74927E1B6676BC003FE464 /* image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D74927C1B6676BC003FE464 /* image_1.jpg */; };
@@ -70,6 +71,7 @@
 		726125111B5DA82700EDF297 /* FloorPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorPlanViewController.h; sourceTree = "<group>"; };
 		726125121B5DA82700EDF297 /* FloorPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorPlanViewController.m; sourceTree = "<group>"; };
 		7C9FFBD40C7BD04927FF6A0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7D05E12C1B7CCF6600D4A4CA /* TriangleDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TriangleDown.png; path = floorplan/images/TriangleDown.png; sourceTree = "<group>"; };
 		7D7492761B666EFE003FE464 /* AreasListTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreasListTableVC.h; path = floorplan/AreasListTableVC.h; sourceTree = "<group>"; };
 		7D7492771B666EFE003FE464 /* AreasListTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreasListTableVC.m; path = floorplan/AreasListTableVC.m; sourceTree = "<group>"; };
 		7D7492791B6670C9003FE464 /* areas_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = areas_config.plist; path = floorplan/areas_config.plist; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		7D74927B1B667683003FE464 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7D05E12C1B7CCF6600D4A4CA /* TriangleDown.png */,
 				7D74927C1B6676BC003FE464 /* image_1.jpg */,
 				7D74927D1B6676BC003FE464 /* image_2.jpg */,
 			);
@@ -404,6 +407,7 @@
 				7D74927F1B6676BC003FE464 /* image_2.jpg in Resources */,
 				7D74927E1B6676BC003FE464 /* image_1.jpg in Resources */,
 				7261250F1B5D965400EDF297 /* Main.storyboard in Resources */,
+				7D05E12D1B7CCF6600D4A4CA /* TriangleDown.png in Resources */,
 				88CD1A3A14E2007F00B54AF0 /* Icon-72.png in Resources */,
 				88CD1A3B14E2007F00B54AF0 /* Icon.png in Resources */,
 				88CD1A3C14E2007F00B54AF0 /* Icon@2x.png in Resources */,

@@ -13,6 +13,7 @@
 #import "math.h"
 #import "DetailView.h"
 #import <EstimoteSDK/EstimoteSDK.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 
 #define GroundFloorImageSize CGSizeMake(707., 500.)
@@ -255,8 +256,13 @@
 
 - (void)tiledScrollView:(JCTiledScrollView *)scrollView didSelectAnnotationView:(JCAnnotationView *)view{
     NSLog(@" view %@", view );
-   [self performSegueWithIdentifier:@"showDetail" sender:self];
-    
+   
+    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"dolly" ofType:@"mp4"];
+    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
+
+    MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
+    [self presentMoviePlayerViewControllerAnimated:movieController];
+    [movieController.moviePlayer play];
 }
 
 
