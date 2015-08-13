@@ -87,7 +87,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="2Sw-Mm-6eC" customClass="CustomAnnotationView">
-                    <rect key="frame" x="0.0" y="0.0" width="138" height="167"/>
+                    <rect key="frame" x="0.0" y="0.0" width="138" height="300"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-pP-ojT">
@@ -120,7 +120,9 @@
                         </imageView>
                     </subviews>
                     <connections>
+                        <outlet property="details" destination="WRi-8K-ge6" id="z2G-K1-bqq"/>
                         <outlet property="moreInfoButton" destination="910-ud-GAF" id="DyS-vb-GQD"/>
+                        <outlet property="title" destination="G7A-e1-vPE" id="Rho-eU-xsg"/>
                     </connections>
                 </view>
             </objects>

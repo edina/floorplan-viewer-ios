@@ -582,9 +582,7 @@
 -(void) moveToPointX:(CGFloat)x andY:(CGFloat)y atZoomLevel:(CGFloat)zoomLevel{
     self.zoomScale =zoomLevel;
     [self setContentCenter:CGPointMake(x, y) animated:YES];
-    
-    
-    
+       
     
 }
 

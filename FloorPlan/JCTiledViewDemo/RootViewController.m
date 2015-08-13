@@ -234,11 +234,15 @@
 {
     NSString static *reuseIdentifier = @"JCAnnotationReuseIdentifier";
     DemoAnnotationView *view = (DemoAnnotationView *)[scrollView dequeueReusableAnnotationViewWithReuseIdentifier:reuseIdentifier];
+    Area *a = self.area;
     
     if (!view)
     {
         view = [[DemoAnnotationView alloc] initWithFrame:CGRectZero annotation:annotation reuseIdentifier:@"Identifier" withView: self.callout];
+        self.callout.title.text = a.title;
+        self.callout.details.text = a.desc;
         view.button = self.callout.moreInfoButton;
+        
         [view sizeToFit];
     }
     

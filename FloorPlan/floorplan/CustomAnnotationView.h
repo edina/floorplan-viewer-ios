@@ -10,5 +10,7 @@
 
 @interface CustomAnnotationView : UIView
 @property (weak, nonatomic) IBOutlet UIButton *moreInfoButton;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UITextView *details;
 
 @end
