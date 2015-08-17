@@ -13,6 +13,8 @@
 			<string>image_1.jpg</string>
 			<key>location</key>
 			<string>3976,957</string>
+            <key>minorBeaconId</key>
+            <string>59317</string>
 		</dict>
         <dict>
             <key>title</key>
@@ -23,6 +25,8 @@
 			<string>image_2.jpg</string>
 			<key>location</key>
 			<string>5120,1056</string>
+            <key>minorBeaconId</key>
+            <string>43808</string>
         </dict>
 
 	</array>

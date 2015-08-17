@@ -14,7 +14,8 @@
 @property (nonatomic, strong)NSString *title;
 @property (nonatomic, strong)NSString *desc;
 @property (nonatomic, strong)NSString *location;
+@property (nonatomic, strong)NSString *minorBeaconId;
 
-+ (Area *)createAreaWithTitle:(NSString *)title description:(NSString *)description image:(NSString *)image location:(NSString *)location;
++ (Area *)createAreaWithTitle:(NSString *)title description:(NSString *)description image:(NSString *)image location:(NSString *)location minorBeaconId:(NSString *) beaconId;
 
 @end

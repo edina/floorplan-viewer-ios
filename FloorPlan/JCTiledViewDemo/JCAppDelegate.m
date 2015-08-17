@@ -11,11 +11,16 @@
 #import <EstimoteSDK/EstimoteSDK.h>
 
 @interface JCAppDelegate () <ESTBeaconManagerDelegate>
-// 3. Add a property to hold the beacon manager
-@property (nonatomic) ESTBeaconManager *beaconManager;
+@property (nonatomic) CLBeaconRegion *beaconRegion;
 @end
 
 @implementation JCAppDelegate
+
+
++ (JCAppDelegate *)appDelegate
+{
+    return (JCAppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -24,12 +29,13 @@
     self.beaconManager.delegate = self;
    
     [self.beaconManager requestAlwaysAuthorization];
+    CLBeaconRegion *allEstimoteBeacons = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc]
+        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
+     identifier:@"all estimotes beacons region"];
+     self.beaconRegion = allEstimoteBeacons;
     
+    [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
     
-    /*[[UIApplication sharedApplication]
- registerUserNotificationSettings:[UIUserNotificationSettings
-                                   settingsForTypes:UIUserNotificationTypeAlert
-                                   categories:nil]];*/
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     // 2. Get storyboard
@@ -41,29 +47,11 @@
     // 5. Call to show views
     [self.window makeKeyAndVisible];
     
-    CLBeaconRegion *lightBlue = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc]
-        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
-    major:51613 minor:27600 identifier:@"monitored region"];
-    CLBeaconRegion *lightGreen = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc]
-        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
-    major:31179 minor:43808 identifier:@"monitored region"];
-    
-    [self.beaconManager startMonitoringForRegion:lightBlue];
-    
-    [self.beaconManager startMonitoringForRegion:lightGreen];
     
     return YES;
 }
 
-- (void)beaconManager:(id)manager didEnterRegion:(CLBeaconRegion *)region {
-    UILocalNotification *notification = [UILocalNotification new];
-    notification.alertBody =
-        @"Your gate closes in 47 minutes. "
-         "Current security wait time is 15 minutes, "
-         "and it's a 5 minute walk from security to the gate. "
-         "Looks like you've got plenty of time!";
-    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -83,6 +71,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+ [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
 }
 
 @end

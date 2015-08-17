@@ -10,6 +10,13 @@
 #import "Area.h"
 #import "AreaTableViewCell.h"
 #import "RootViewController.h"
+#import <EstimoteSDK/EstimoteSDK.h>
+#import "FloorPlanBeaconRanging.h"
+#import "JCAppDelegate.h"
+
+@interface AreasListTableVC() <ESTBeaconManagerDelegate>
+@property (strong) FloorPlanBeaconRanging * floorPlanRanging;
+@end
 
 @implementation AreasListTableVC
 
@@ -23,6 +30,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//sort areas key on beacon.
+    self.floorPlanRanging = [[FloorPlanBeaconRanging alloc] init];
+    
+    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+
+    appDelegate.beaconManager.delegate = self;
 
     
     NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"areas_config" ofType:@"plist"];
@@ -31,7 +45,7 @@
     for (NSDictionary *r in areas) {
         
         
-        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"]];
+        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"beaconMinorId"]];
 
         
         [self.areas addObject:area];
@@ -88,6 +102,19 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.areas count];
+}
+
+
+- (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons
+             inRegion:(CLBeaconRegion *)region {
+    CLBeacon *nearestBeacon = beacons.firstObject;
+    if (nearestBeacon) {
+        Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
+        // TODO: update the UI here
+        NSLog(@"%@", area.title); // TODO: remove after implementing the UI
+        
+        
+    }
 }
 
 @end

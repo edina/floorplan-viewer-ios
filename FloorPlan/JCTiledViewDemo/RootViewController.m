@@ -14,6 +14,8 @@
 #import "DetailView.h"
 #import <EstimoteSDK/EstimoteSDK.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "JCAppDelegate.h"
+#import "FloorPlanBeaconRanging.h"
 
 
 #define GroundFloorImageSize CGSizeMake(707., 500.)
@@ -25,10 +27,11 @@
 
 @interface RootViewController () <ESTBeaconManagerDelegate>
 // 3. Add properties to hold the beacon manager and the beacon region
-@property (nonatomic) ESTBeaconManager *beaconManager;
-@property (nonatomic) CLBeaconRegion *beaconRegion;
 
-@property (nonatomic) NSDictionary *placesByBeacons;
+
+@property (strong) FloorPlanBeaconRanging * floorPlanRanging;
+
+
 
 @end
 
@@ -45,45 +48,21 @@
  }*/
 
 
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    
 
     
-      self.placesByBeacons = @{
-        @"6574:54631": @{
-            @"Heavenly Sandwiches": @50, // read as: it's 50 meters from
-                                         // "Heavenly Sandwiches" to the beacon with
-                                         // major 6574 and minor 54631
-            @"Green & Green Salads": @150,
-            @"Mini Panini": @325
-        },
-        @"31179:43808": @{
-            @"Heavenly Sandwiches": @250,
-            @"Green & Green Salads": @100,
-            @"Mini Panini": @20
-        },
-        @"51613:27600": @{
-            @"Heavenly Sandwiches": @350,
-            @"Green & Green Salads": @500,
-            @"Mini Panini": @170
-        }
-    };
+
+    //sort areas key on beacon.
+    self.floorPlanRanging = [[FloorPlanBeaconRanging alloc] init];
     
-    // 4. Instantiate the beacon manager & set its delegate
-    self.beaconManager = [ESTBeaconManager new];
-    self.beaconManager.delegate = self;
-    // 5. Instantiate the beacon region
-      CLBeaconRegion *lightGreen = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc]
-        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
-     identifier:@"monitored region"];
     
-    self.beaconRegion = lightGreen;
-    // 6. We need to request this authorization for every beacon manager
-    [self.beaconManager requestAlwaysAuthorization];
-    
+    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+
+    appDelegate.beaconManager.delegate = self;
+
     
     
     self.detailView = [[DetailView alloc] initWithFrame:CGRectZero];
@@ -94,9 +73,7 @@
     
     CGRect scrollView_frame = CGRectOffset(CGRectInset(self.view.bounds,0.,size_for_detail.height/2.0f),0.,size_for_detail.height/2.0f);
     
-    //PDF
-    //self.scrollView = [[JCTiledPDFScrollView alloc] initWithFrame:scrollView_frame URL:[[NSBundle mainBundle] URLForResource:@"Map" withExtension:@"pdf"]];
-    
+
     //Bitmap
     self.scrollView = [[JCTiledScrollView alloc] initWithFrame:scrollView_frame contentSize:GroundFloorImageSize];
     
@@ -167,12 +144,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
+  
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
+    
+   
 }
 
 #pragma mark - Rotation
@@ -270,24 +248,15 @@
 }
 
 
-- (NSArray *)placesNearBeacon:(CLBeacon *)beacon {
-    NSString *beaconKey = [NSString stringWithFormat:@"%@:%@",
-                           beacon.major, beacon.minor];
-    NSDictionary *places = [self.placesByBeacons objectForKey:beaconKey];
-    NSArray *sortedPlaces = [places keysSortedByValueUsingComparator:
-                             ^NSComparisonResult(id obj1, id obj2) {
-                                 return [obj1 compare:obj2];
-                             }];
-    return sortedPlaces;
-}
-
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons
              inRegion:(CLBeaconRegion *)region {
     CLBeacon *nearestBeacon = beacons.firstObject;
     if (nearestBeacon) {
-        NSArray *places = [self placesNearBeacon:nearestBeacon];
+        Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
         // TODO: update the UI here
-        NSLog(@"%@", nearestBeacon); // TODO: remove after implementing the UI
+        NSLog(@"%@", area.title); // TODO: remove after implementing the UI
+        
+        
     }
 }
 
