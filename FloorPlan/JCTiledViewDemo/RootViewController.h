@@ -10,6 +10,7 @@
 #import "Area.h"
 #import "CustomAnnotationView.h"
 
+
 @class DetailView, JCTiledScrollView;
 
 @interface RootViewController : UIViewController <JCTileSource, JCTiledScrollViewDelegate>

@@ -33,7 +33,7 @@
     [super viewDidLoad];
     
     //sort areas key on beacon.
-    self.floorPlanRanging = [[FloorPlanBeaconRanging alloc] init];
+    self.floorPlanRanging = [JCAppDelegate appDelegate].floorPlanRanging;
     
     
     

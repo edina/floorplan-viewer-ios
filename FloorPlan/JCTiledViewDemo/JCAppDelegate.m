@@ -7,11 +7,12 @@
 //
 
 #import "JCAppDelegate.h"
-#import "RootViewController.h"
 #import <EstimoteSDK/EstimoteSDK.h>
+#import "FloorplanBeaconRanging.h"
 
 @interface JCAppDelegate () <ESTBeaconManagerDelegate>
 @property (nonatomic) CLBeaconRegion *beaconRegion;
+
 @end
 
 @implementation JCAppDelegate
@@ -21,6 +22,9 @@
 {
     return (JCAppDelegate *)[[UIApplication sharedApplication] delegate];
 }
+
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -41,8 +45,11 @@
     // 2. Get storyboard
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     // 3. Create vc
-    RootViewController *floorPlanVC = [storyboard instantiateViewControllerWithIdentifier:@"areas-list"];
+    UIViewController *floorPlanVC = [storyboard instantiateViewControllerWithIdentifier:@"areas-list"];
     // 4. Set as root
+    
+    self.floorPlanRanging = [[FloorPlanBeaconRanging alloc] init];
+    
     self.window.rootViewController = floorPlanVC;
     // 5. Call to show views
     [self.window makeKeyAndVisible];

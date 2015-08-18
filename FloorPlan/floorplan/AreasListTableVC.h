@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FloorplanBeaconRanging.h"
 @interface AreasListTableVC : UITableViewController
+
 
 @property(nonatomic, strong) NSMutableArray *areas;
 

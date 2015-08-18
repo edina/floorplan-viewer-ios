@@ -30,7 +30,7 @@
 
 
 @property (strong) FloorPlanBeaconRanging * floorPlanRanging;
-
+- (void)moveToArea:(Area *) area;
 
 
 @end
@@ -39,6 +39,29 @@
 
 
 #pragma mark - View lifecycle
+- (void)moveToArea:(Area *) area {
+    NSArray *coords = [area.location componentsSeparatedByString:@","];
+    
+    CGFloat x = [coords[0] doubleValue];
+    CGFloat y =  [coords[1] doubleValue];
+    
+    
+    
+    
+    x = x/MAX_ZOOM_LEVEL;
+    y = y/MAX_ZOOM_LEVEL;
+    
+    //[self.scrollView moveToPointX:x andY:y atZoomLevel:3.0f];
+    
+    
+    id<JCAnnotation> a = [[DemoAnnotation alloc] init];
+    a.contentPosition = CGPointMake(x,y );
+    [self.scrollView addAnnotation:a];
+    //self.scrollView.zoomScale = 6;
+    //[self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
+    [self.scrollView moveToPointX:x andY:y atZoomLevel:6];
+}
+
 /*
  - (void)loadView
  {
@@ -56,8 +79,7 @@
     
 
     //sort areas key on beacon.
-    self.floorPlanRanging = [[FloorPlanBeaconRanging alloc] init];
-
+    self.floorPlanRanging = [JCAppDelegate appDelegate].floorPlanRanging;
 
     
     
@@ -87,36 +109,12 @@
     
     [self.view addSubview:self.scrollView];
     
-    UIButton *addButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [addButton setTitle:@"+ Annotations" forState:UIControlStateNormal];
-    addButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - 115, 25., 110, 38);
-    addButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-    [addButton addTarget:self action:@selector(addRandomAnnotations) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:addButton];
+
     
     [self tiledScrollViewDidZoom:self.scrollView]; //force the detailView to update the frist time
     
-    NSArray *coords = [self.area.location componentsSeparatedByString:@","];
-    
-    CGFloat x = [coords[0] doubleValue];
-    CGFloat y =  [coords[1] doubleValue];
-    
-    
-    
+    [self moveToArea:self.area];
    
-    x = x/MAX_ZOOM_LEVEL;
-    y = y/MAX_ZOOM_LEVEL;
-    
-    [self.scrollView moveToPointX:x andY:y atZoomLevel:3.0f];
-    
-    
-    id<JCAnnotation> a = [[DemoAnnotation alloc] init];
-    a.contentPosition = CGPointMake(x,y );
-    [self.scrollView addAnnotation:a];
-    //self.scrollView.zoomScale = 6;
-    //[self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
-    [self.scrollView moveToPointX:x andY:y atZoomLevel:6];
-    //[self addRandomAnnotations];
 }
 
 
@@ -252,9 +250,11 @@
     CLBeacon *nearestBeacon = beacons.firstObject;
     if (nearestBeacon) {
         Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
-        // TODO: update the UI here
-        NSLog(@"%@", area.title); // TODO: remove after implementing the UI
         
+        NSLog(@"%@", area.title); // TODO: remove after implementing the UI
+        if (area.hasVisited) {
+            [self moveToArea:area];
+        }
         
     }
 }
