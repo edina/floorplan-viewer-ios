@@ -57,11 +57,7 @@
 
     //sort areas key on beacon.
     self.floorPlanRanging = [[FloorPlanBeaconRanging alloc] init];
-    
-    
-    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
 
-    appDelegate.beaconManager.delegate = self;
 
     
     
@@ -142,9 +138,12 @@
     [self becomeFirstResponder];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+-(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-  
+    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+    
+    appDelegate.beaconManager.delegate = self;
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

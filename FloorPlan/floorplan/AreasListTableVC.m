@@ -15,7 +15,8 @@
 #import "JCAppDelegate.h"
 
 @interface AreasListTableVC() <ESTBeaconManagerDelegate>
-@property (strong) FloorPlanBeaconRanging * floorPlanRanging;
+@property (nonatomic, strong) FloorPlanBeaconRanging *floorPlanRanging;
+@property (nonatomic, strong) Area *currentSelectedArea;
 @end
 
 @implementation AreasListTableVC
@@ -31,13 +32,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//sort areas key on beacon.
+    //sort areas key on beacon.
     self.floorPlanRanging = [[FloorPlanBeaconRanging alloc] init];
     
-    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
-
-    appDelegate.beaconManager.delegate = self;
-
+    
+    
     
     NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"areas_config" ofType:@"plist"];
     NSArray *areas = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"areas"];
@@ -46,19 +45,28 @@
         
         
         Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"beaconMinorId"]];
-
+        
         
         [self.areas addObject:area];
         
     }
     
     
-
+    
     
     self.navigationItem.title = @"Areas";
     
     
 }
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+    
+    appDelegate.beaconManager.delegate = self;
+    
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -80,23 +88,30 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if(![segue.identifier isEqualToString:@"floorplan"]){
+        return;
+    }
+    Area *activatedArea = nil;
     if([sender isKindOfClass:[UITableViewCell class]]){
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-   
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
         
         if(indexPath) {
-            Area *area = [self.areas objectAtIndex:indexPath.row];
-            if([segue.identifier isEqualToString:@"floorplan"]){
- 
-                
-                RootViewController *controller = [segue destinationViewController];
-                controller.area = area;
-
-                
-            }
+            activatedArea = [self.areas objectAtIndex:indexPath.row];
+            
         }
+        
+    } else if ([sender isKindOfClass:[Area class]]){
+        
+        
+        activatedArea = sender;
+        
     }
+    
+    RootViewController *controller = [segue destinationViewController];
+    controller.area = activatedArea;
 }
+
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -112,7 +127,15 @@
         Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
         // TODO: update the UI here
         NSLog(@"%@", area.title); // TODO: remove after implementing the UI
-        
+        //go to place on floorplan
+        if (area) {
+
+            self.currentSelectedArea = area;
+            if(!self.currentSelectedArea.hasVisited){
+                self.currentSelectedArea.hasVisited = YES;
+                [self performSegueWithIdentifier:@"floorplan" sender:area];
+            }
+        }
         
     }
 }

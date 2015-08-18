@@ -19,6 +19,7 @@
     area.image = [UIImage imageNamed:image];
     area.location = location;
     area.minorBeaconId = beaconId;
+    
     return area;
     
 }

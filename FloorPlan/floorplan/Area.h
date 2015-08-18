@@ -15,6 +15,7 @@
 @property (nonatomic, strong)NSString *desc;
 @property (nonatomic, strong)NSString *location;
 @property (nonatomic, strong)NSString *minorBeaconId;
+@property (nonatomic, assign)BOOL hasVisited;
 
 + (Area *)createAreaWithTitle:(NSString *)title description:(NSString *)description image:(NSString *)image location:(NSString *)location minorBeaconId:(NSString *) beaconId;
 
