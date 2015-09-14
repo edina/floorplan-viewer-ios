@@ -76,9 +76,13 @@
     
     if (cell == nil) {
         cell = [[AreaTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:simpleTableIdentifier];
+        
     }
+    [cell.areaTitle setFont:[UIFont fontWithName:@"SourceSansPro-Regular" size:18]];
     
+    [cell.areaDetail setFont:[UIFont fontWithName:@"SourceSansPro-Regular" size:12]];
     
+
     Area *area = [self.areas objectAtIndex:indexPath.row];
     cell.areaTitle.text = area.title;
     cell.areaImage.image = area.image;
