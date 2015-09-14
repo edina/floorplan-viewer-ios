@@ -215,7 +215,9 @@
     {
         view = [[DemoAnnotationView alloc] initWithFrame:CGRectZero annotation:annotation reuseIdentifier:@"Identifier" withView: self.callout];
         self.callout.title.text = a.title;
+        self.callout.title.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:12];
         self.callout.details.text = a.desc;
+        self.callout.imageIcon.image = a.image;
         view.button = self.callout.moreInfoButton;
         
         [view sizeToFit];
@@ -236,7 +238,7 @@
 - (void)tiledScrollView:(JCTiledScrollView *)scrollView didSelectAnnotationView:(JCAnnotationView *)view{
     NSLog(@" view %@", view );
    
-    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"dolly" ofType:@"mp4"];
+    NSString *videoPath = [[NSBundle mainBundle] pathForResource:self.area.video ofType:@"mp4"];
     NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
 
     MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];

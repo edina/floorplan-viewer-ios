@@ -44,7 +44,7 @@
     for (NSDictionary *r in areas) {
         
         
-        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"beaconMinorId"]];
+        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"beaconMinorId"] video:r[@"video"]];
         
         
         [self.areas addObject:area];

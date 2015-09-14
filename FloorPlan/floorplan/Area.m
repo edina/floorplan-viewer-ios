@@ -10,7 +10,7 @@
 
 @implementation Area
 
-+ (Area *)createAreaWithTitle:(NSString *)title description:(NSString *)description image:(NSString *)image location:(NSString *)location minorBeaconId:(NSString *)beaconId{
++ (Area *)createAreaWithTitle:(NSString *)title description:(NSString *)description image:(NSString *)image location:(NSString *)location minorBeaconId:(NSString *)beaconId video:(NSString *)video{
     
 
     Area *area = [[Area alloc] init];
@@ -19,6 +19,7 @@
     area.image = [UIImage imageNamed:image];
     area.location = location;
     area.minorBeaconId = beaconId;
+    area.video = video;
     
     return area;
     

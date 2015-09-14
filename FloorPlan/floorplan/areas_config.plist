@@ -16,6 +16,8 @@
 			<string>1650,2000</string>
             <key>minorBeaconId</key>
             <string>60514</string>
+            <key>video</key>
+            <string>welcome_to_the_main_library</string>
 		</dict>
         <dict>
             <key>title</key>
@@ -28,6 +30,8 @@
 			<string>1650,3000</string>
             <key>minorBeaconId</key>
             <string>15877</string>
+            <key>video</key>
+            <string>building_history</string>
         </dict>
 		<dict>
 			<key>title</key>
@@ -40,6 +44,8 @@
 			<string>500,2900</string>
             <key>minorBeaconId</key>
             <string>58026</string>
+            <key>video</key>
+            <string>exhibition_gallery</string>
 		</dict>
         <dict>
             <key>title</key>
@@ -52,6 +58,8 @@
 			<string>1700,1300</string>
             <key>minorBeaconId</key>
             <string>11097</string>
+            <key>video</key>
+            <string>help_desk_and_hub</string>
         </dict>
 		<dict>
 			<key>title</key>
@@ -64,6 +72,8 @@
 			<string>4500,500</string>
             <key>minorBeaconId</key>
             <string>36696</string>
+            <key>video</key>
+            <string>ground_floor_study_area</string>
 		</dict>
         <dict>
             <key>title</key>
@@ -76,6 +86,8 @@
 			<string>4400,1750</string>
             <key>minorBeaconId</key>
             <string>34740</string>
+            <key>video</key>
+            <string>signature_room</string>
         </dict>
 		<dict>
 			<key>title</key>
@@ -88,6 +100,8 @@
 			<string>2950,2850</string>
             <key>minorBeaconId</key>
             <string>27600</string>
+            <key>video</key>
+            <string>library_cafe_and_beyond</string>
 		</dict>
 
 	</array>

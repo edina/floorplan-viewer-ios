@@ -12,5 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *moreInfoButton;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UITextView *details;
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageIcon;
 @end
