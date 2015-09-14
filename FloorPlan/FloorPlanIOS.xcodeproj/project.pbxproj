@@ -21,6 +21,16 @@
 		7D74927F1B6676BC003FE464 /* image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D74927D1B6676BC003FE464 /* image_2.jpg */; };
 		7D7492841B667B03003FE464 /* Area.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7492831B667B03003FE464 /* Area.m */; };
 		7DCF8BDD1B26E6F6005FA939 /* FloorPlan_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */; };
+		7DE76CF81BA6CEFF00D34326 /* building_history_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CEE1BA6CEFF00D34326 /* building_history_crop.png */; };
+		7DE76CF91BA6CEFF00D34326 /* exhibition_gallery_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CEF1BA6CEFF00D34326 /* exhibition_gallery_crop.png */; };
+		7DE76CFA1BA6CEFF00D34326 /* ground_floor_study_area_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF01BA6CEFF00D34326 /* ground_floor_study_area_crop.png */; };
+		7DE76CFB1BA6CEFF00D34326 /* helpdesk_and_hub_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF11BA6CEFF00D34326 /* helpdesk_and_hub_crop.png */; };
+		7DE76CFC1BA6CEFF00D34326 /* library_cafe_and_beyond_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF21BA6CEFF00D34326 /* library_cafe_and_beyond_crop.png */; };
+		7DE76CFD1BA6CEFF00D34326 /* push_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF31BA6CEFF00D34326 /* push_pin.png */; };
+		7DE76CFE1BA6CEFF00D34326 /* signature_room_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF41BA6CEFF00D34326 /* signature_room_crop.png */; };
+		7DE76CFF1BA6CEFF00D34326 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF51BA6CEFF00D34326 /* splash.png */; };
+		7DE76D001BA6CEFF00D34326 /* uni_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF61BA6CEFF00D34326 /* uni_logo.png */; };
+		7DE76D011BA6CEFF00D34326 /* welcome_to_the_main_library_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DE76CF71BA6CEFF00D34326 /* welcome_to_the_main_library_crop.png */; };
 		7DEA79ED1B7A0B2600A362EC /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA79EC1B7A0B2600A362EC /* CustomAnnotationView.m */; };
 		7DF989A41B67929F00D048ED /* AreaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF989A31B67929F00D048ED /* AreaTableViewCell.m */; };
 		8809DC4D14D8E44A0003B4C6 /* tiles in Resources */ = {isa = PBXBuildFile; fileRef = 8809DC4C14D8E44A0003B4C6 /* tiles */; };
@@ -85,6 +95,16 @@
 		7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FloorPlanIOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCF8BDB1B26E6F6005FA939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloorPlan_Tests.m; sourceTree = "<group>"; };
+		7DE76CEE1BA6CEFF00D34326 /* building_history_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = building_history_crop.png; sourceTree = "<group>"; };
+		7DE76CEF1BA6CEFF00D34326 /* exhibition_gallery_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exhibition_gallery_crop.png; sourceTree = "<group>"; };
+		7DE76CF01BA6CEFF00D34326 /* ground_floor_study_area_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground_floor_study_area_crop.png; sourceTree = "<group>"; };
+		7DE76CF11BA6CEFF00D34326 /* helpdesk_and_hub_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpdesk_and_hub_crop.png; sourceTree = "<group>"; };
+		7DE76CF21BA6CEFF00D34326 /* library_cafe_and_beyond_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library_cafe_and_beyond_crop.png; sourceTree = "<group>"; };
+		7DE76CF31BA6CEFF00D34326 /* push_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push_pin.png; sourceTree = "<group>"; };
+		7DE76CF41BA6CEFF00D34326 /* signature_room_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signature_room_crop.png; sourceTree = "<group>"; };
+		7DE76CF51BA6CEFF00D34326 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		7DE76CF61BA6CEFF00D34326 /* uni_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uni_logo.png; sourceTree = "<group>"; };
+		7DE76CF71BA6CEFF00D34326 /* welcome_to_the_main_library_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome_to_the_main_library_crop.png; sourceTree = "<group>"; };
 		7DEA79EB1B7A0B2600A362EC /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotationView.h; path = floorplan/CustomAnnotationView.h; sourceTree = "<group>"; };
 		7DEA79EC1B7A0B2600A362EC /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAnnotationView.m; path = floorplan/CustomAnnotationView.m; sourceTree = "<group>"; };
 		7DF989A21B67929F00D048ED /* AreaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaTableViewCell.h; path = floorplan/AreaTableViewCell.h; sourceTree = "<group>"; };
@@ -196,6 +216,16 @@
 		7D74927B1B667683003FE464 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7DE76CEE1BA6CEFF00D34326 /* building_history_crop.png */,
+				7DE76CEF1BA6CEFF00D34326 /* exhibition_gallery_crop.png */,
+				7DE76CF01BA6CEFF00D34326 /* ground_floor_study_area_crop.png */,
+				7DE76CF11BA6CEFF00D34326 /* helpdesk_and_hub_crop.png */,
+				7DE76CF21BA6CEFF00D34326 /* library_cafe_and_beyond_crop.png */,
+				7DE76CF31BA6CEFF00D34326 /* push_pin.png */,
+				7DE76CF41BA6CEFF00D34326 /* signature_room_crop.png */,
+				7DE76CF51BA6CEFF00D34326 /* splash.png */,
+				7DE76CF61BA6CEFF00D34326 /* uni_logo.png */,
+				7DE76CF71BA6CEFF00D34326 /* welcome_to_the_main_library_crop.png */,
 				7D05E12C1B7CCF6600D4A4CA /* TriangleDown.png */,
 				7D74927C1B6676BC003FE464 /* image_1.jpg */,
 				7D74927D1B6676BC003FE464 /* image_2.jpg */,
@@ -407,18 +437,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				722A94341B7BA261008963D3 /* dolly.mp4 in Resources */,
+				7DE76CFF1BA6CEFF00D34326 /* splash.png in Resources */,
 				887EE95014D8DC2D00AB0A92 /* InfoPlist.strings in Resources */,
+				7DE76CF91BA6CEFF00D34326 /* exhibition_gallery_crop.png in Resources */,
 				8809DC4D14D8E44A0003B4C6 /* tiles in Resources */,
 				7D74927F1B6676BC003FE464 /* image_2.jpg in Resources */,
 				7D74927E1B6676BC003FE464 /* image_1.jpg in Resources */,
+				7DE76CFD1BA6CEFF00D34326 /* push_pin.png in Resources */,
+				7DE76CFC1BA6CEFF00D34326 /* library_cafe_and_beyond_crop.png in Resources */,
 				7261250F1B5D965400EDF297 /* Main.storyboard in Resources */,
 				7D05E12D1B7CCF6600D4A4CA /* TriangleDown.png in Resources */,
 				88CD1A3A14E2007F00B54AF0 /* Icon-72.png in Resources */,
+				7DE76CF81BA6CEFF00D34326 /* building_history_crop.png in Resources */,
 				88CD1A3B14E2007F00B54AF0 /* Icon.png in Resources */,
+				7DE76CFB1BA6CEFF00D34326 /* helpdesk_and_hub_crop.png in Resources */,
 				88CD1A3C14E2007F00B54AF0 /* Icon@2x.png in Resources */,
+				7DE76CFE1BA6CEFF00D34326 /* signature_room_crop.png in Resources */,
+				7DE76CFA1BA6CEFF00D34326 /* ground_floor_study_area_crop.png in Resources */,
+				7DE76D011BA6CEFF00D34326 /* welcome_to_the_main_library_crop.png in Resources */,
 				88197C101558C251005EF22F /* marker-red.png in Resources */,
 				888630DE172938C600F8E5D4 /* Default-568h@2x.png in Resources */,
 				7D74927A1B6670C9003FE464 /* areas_config.plist in Resources */,
+				7DE76D001BA6CEFF00D34326 /* uni_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

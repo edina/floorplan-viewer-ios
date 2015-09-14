@@ -3,33 +3,96 @@
 <plist version="1.0">
 <dict>
 	<key>areas</key>
+    
 	<array>
 		<dict>
 			<key>title</key>
-			<string>1 Entrance</string>
+			<string>Welcome to the Main Library</string>
 			<key>description</key>
-			<string>The Main Library was designed by Sir Basil Spence. It was built in 1967.  and A-listed in 2005. Major redevelopment began in 2007, and was completed in Spring 2013.</string>
+			<string>Largest library on campus</string>
 			<key>image</key>
-			<string>image_1.jpg</string>
+			<string>welcome_to_the_main_library_crop.png</string>
 			<key>location</key>
-			<string>3976,957</string>
+			<string>1650,2000</string>
             <key>minorBeaconId</key>
-            <string>59317</string>
+            <string>60514</string>
 		</dict>
         <dict>
             <key>title</key>
-            <string>2 Reception Desk</string>
+            <string>Building History</string>
 			<key>description</key>
-			<string>Staffed by both Library Helpdesk and Library Facilities staff. If you are visiting the library, or have lost your University card, this desk will be your first port of call.</string>
+			<string>1960s to the present day</string>
 			<key>image</key>
-			<string>image_2.jpg</string>
+			<string>building_history_crop.png</string>
 			<key>location</key>
-			<string>5120,1056</string>
+			<string>1650,3000</string>
             <key>minorBeaconId</key>
-            <string>43808</string>
+            <string>15877</string>
         </dict>
+		<dict>
+			<key>title</key>
+			<string>Exhibition Gallery</string>
+			<key>description</key>
+			<string>Engage with our collections</string>
+			<key>image</key>
+			<string>exhibition_gallery_crop.png</string>
+			<key>location</key>
+			<string>500,2900</string>
+            <key>minorBeaconId</key>
+            <string>58026</string>
+		</dict>
+        <dict>
+            <key>title</key>
+            <string>Help Desk and HUB</string>
+			<key>description</key>
+			<string>Any question answered</string>
+			<key>image</key>
+			<string>helpdesk_and_hub_crop.png</string>
+			<key>location</key>
+			<string>1700,1300</string>
+            <key>minorBeaconId</key>
+            <string>11097</string>
+        </dict>
+		<dict>
+			<key>title</key>
+			<string>Ground Floor Study Area</string>
+			<key>description</key>
+			<string>Diverse study space</string>
+			<key>image</key>
+			<string>ground_floor_study_area_crop.png</string>
+			<key>location</key>
+			<string>4500,500</string>
+            <key>minorBeaconId</key>
+            <string>36696</string>
+		</dict>
+        <dict>
+            <key>title</key>
+            <string>Signature Room</string>
+			<key>description</key>
+			<string>Study with the greats</string>
+			<key>image</key>
+			<string>signature_room_crop.png</string>
+			<key>location</key>
+			<string>4400,1750</string>
+            <key>minorBeaconId</key>
+            <string>34740</string>
+        </dict>
+		<dict>
+			<key>title</key>
+			<string>Library Cafe and Beyond</string>
+			<key>description</key>
+			<string>Continue your tour</string>
+			<key>image</key>
+			<string>library_cafe_and_beyond_crop.png</string>
+			<key>location</key>
+			<string>2950,2850</string>
+            <key>minorBeaconId</key>
+            <string>27600</string>
+		</dict>
 
 	</array>
+    
+    
     
 </dict>
 </plist>
