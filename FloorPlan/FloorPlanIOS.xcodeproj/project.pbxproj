@@ -21,6 +21,7 @@
 		7D1EBE8C1BA701A7007805FF /* library_cafe_and_beyond.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7D1EBE851BA701A7007805FF /* library_cafe_and_beyond.mp4 */; };
 		7D1EBE8D1BA701A7007805FF /* signature_room.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7D1EBE861BA701A7007805FF /* signature_room.mp4 */; };
 		7D1EBE8E1BA701A7007805FF /* welcome_to_the_main_library.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7D1EBE871BA701A7007805FF /* welcome_to_the_main_library.mp4 */; };
+		7D1EBE921BA71A49007805FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D1EBE911BA71A49007805FF /* Images.xcassets */; };
 		7D7492781B666EFE003FE464 /* AreasListTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7492771B666EFE003FE464 /* AreasListTableVC.m */; };
 		7D74927A1B6670C9003FE464 /* areas_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D7492791B6670C9003FE464 /* areas_config.plist */; };
 		7D74927E1B6676BC003FE464 /* image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D74927C1B6676BC003FE464 /* image_1.jpg */; };
@@ -99,6 +100,7 @@
 		7D1EBE851BA701A7007805FF /* library_cafe_and_beyond.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = library_cafe_and_beyond.mp4; sourceTree = "<group>"; };
 		7D1EBE861BA701A7007805FF /* signature_room.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = signature_room.mp4; sourceTree = "<group>"; };
 		7D1EBE871BA701A7007805FF /* welcome_to_the_main_library.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcome_to_the_main_library.mp4; sourceTree = "<group>"; };
+		7D1EBE911BA71A49007805FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D7492761B666EFE003FE464 /* AreasListTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreasListTableVC.h; path = floorplan/AreasListTableVC.h; sourceTree = "<group>"; };
 		7D7492771B666EFE003FE464 /* AreasListTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreasListTableVC.m; path = floorplan/AreasListTableVC.m; sourceTree = "<group>"; };
 		7D7492791B6670C9003FE464 /* areas_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = areas_config.plist; path = floorplan/areas_config.plist; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		887EE93614D8DC2D00AB0A92 = {
 			isa = PBXGroup;
 			children = (
+				7D1EBE911BA71A49007805FF /* Images.xcassets */,
 				7D7492741B666E7B003FE464 /* FloorPlan */,
 				7261250E1B5D965400EDF297 /* Main.storyboard */,
 				88C19C7F150C4D6E007184E6 /* README.md */,
@@ -482,6 +485,7 @@
 				7D05E12D1B7CCF6600D4A4CA /* TriangleDown.png in Resources */,
 				88CD1A3A14E2007F00B54AF0 /* Icon-72.png in Resources */,
 				7DE76CF81BA6CEFF00D34326 /* building_history_crop.png in Resources */,
+				7D1EBE921BA71A49007805FF /* Images.xcassets in Resources */,
 				88CD1A3B14E2007F00B54AF0 /* Icon.png in Resources */,
 				7D1EBE8A1BA701A7007805FF /* ground_floor_study_area.mp4 in Resources */,
 				7DE76CFB1BA6CEFF00D34326 /* helpdesk_and_hub_crop.png in Resources */,
@@ -725,6 +729,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82C6414149D8EDC04A2EB377 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -751,6 +757,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C9FFBD40C7BD04927FF6A0D /* Pods.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

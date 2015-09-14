@@ -215,7 +215,7 @@
     {
         view = [[DemoAnnotationView alloc] initWithFrame:CGRectZero annotation:annotation reuseIdentifier:@"Identifier" withView: self.callout];
         self.callout.title.text = a.title;
-        self.callout.title.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:12];
+        self.callout.title.font = [UIFont fontWithName:@"SourceSansPro-Regular" size:16];
         self.callout.details.text = a.desc;
         self.callout.imageIcon.image = a.image;
         view.button = self.callout.moreInfoButton;
