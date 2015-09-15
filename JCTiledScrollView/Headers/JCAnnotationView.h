@@ -38,6 +38,7 @@
 @property (nonatomic, assign) CGPoint centerOffset;
 @property (nonatomic, strong) NSString *reuseIdentifier;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIImageView *imageButton;
 
 - (id)initWithFrame:(CGRect)frame annotation:(id<JCAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier;
 

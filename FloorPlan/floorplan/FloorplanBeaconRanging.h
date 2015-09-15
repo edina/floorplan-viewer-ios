@@ -10,6 +10,8 @@
 #import "Area.h"
 #import <EstimoteSDK/EstimoteSDK.h>
 @interface FloorPlanBeaconRanging : NSObject
+
+@property(nonatomic, strong) NSMutableDictionary * placesByBeacons;
 - (Area *)areaForBeacon:(CLBeacon *)beacon ;
 
 @end

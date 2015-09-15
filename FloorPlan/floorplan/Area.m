@@ -25,4 +25,10 @@
     
 }
 
+//Debug
+- (BOOL) hasVisited{
+
+    return NO;
+}
+
 @end

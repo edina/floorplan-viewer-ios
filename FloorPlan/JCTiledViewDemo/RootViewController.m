@@ -220,6 +220,7 @@
         self.callout.details.text = a.desc;
         self.callout.imageIcon.image = a.image;
         view.button = self.callout.moreInfoButton;
+        view.imageButton = self.callout.imageIcon;
         
         [view sizeToFit];
     }
@@ -251,18 +252,20 @@
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons
              inRegion:(CLBeaconRegion *)region {
     CLBeacon *nearestBeacon = beacons.firstObject;
+    NSString *beaconKey = [NSString stringWithFormat:@"%@", nearestBeacon.minor];
+    NSLog(@"nearest beacon  %@", beaconKey);
     if (nearestBeacon) {
         Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
         
         NSLog(@"%@", area.title); // TODO: remove after implementing the UI
         
         NSLog(@"%@", self.area.title);
-        if (!area.hasVisited && self.area != area) {
+        if (area!= nil && !area.hasVisited && self.area != area) {
             area.hasVisited = YES;
                             
                         UIAlertController *alertController = [UIAlertController
-                              alertControllerWithTitle:@"Detected Beacon"
-                              message:@"Message"
+                              alertControllerWithTitle:@"Entered Region"
+                              message:area.title
                               preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction 
             actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
@@ -277,11 +280,11 @@ UIAlertAction *okAction = [UIAlertAction
                       style:UIAlertActionStyleDefault
                     handler:^(UIAlertAction *action)
                     {
-                        [self moveToArea:area];
+                        
                         
                         // Delay execution of my block for 10 seconds.
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-    area.hasVisited = NO;
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    [self moveToArea:area];
 });
                         NSLog(@"OK action");
                     }];

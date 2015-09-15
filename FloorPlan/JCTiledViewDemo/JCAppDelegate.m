@@ -26,17 +26,35 @@
 
 
 
+- (void)loadAreasFromConfig
+{
+    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"areas_config" ofType:@"plist"];
+    NSArray *rawAreas = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"areas"];
+    
+    for (NSDictionary *r in rawAreas) {
+        
+        
+        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"minorBeaconId"] video:r[@"video"]];
+        
+        
+        [self.areas addObject:area];
+        
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    [self loadAreasFromConfig];
     
     self.beaconManager = [ESTBeaconManager new];
     self.beaconManager.delegate = self;
-   
+    
     [self.beaconManager requestAlwaysAuthorization];
     CLBeaconRegion *allEstimoteBeacons = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc]
-        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
-     identifier:@"all estimotes beacons region"];
-     self.beaconRegion = allEstimoteBeacons;
+                                                                                        initWithUUIDString:@"b9407f30-f5f8-466e-aff9-25556b57fe6d"]
+                                                                            identifier:@"all estimotes beacons region"];
+    self.beaconRegion = allEstimoteBeacons;
     
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
     
@@ -52,25 +70,21 @@
     
     self.window.rootViewController = floorPlanVC;
     // 5. Call to show views
-    [self.window makeKeyAndVisible];
-    self.areas = [[NSMutableArray alloc] init];
-    
-    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"areas_config" ofType:@"plist"];
-    NSArray *areas = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"areas"];
-    
-    for (NSDictionary *r in areas) {
-        
-        
-        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"beaconMinorId"] video:r[@"video"]];
-        
-        
-        [self.areas addObject:area];
-        
-    }
+    [self.window makeKeyAndVisible];    
     
     return YES;
 }
 
+- (NSMutableArray *)areas
+{
+    if (!_areas) {
+        _areas = [[NSMutableArray alloc] init];
+        
+
+    }
+ 
+    return _areas;
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -91,7 +105,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
- [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
+    [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
 }
 
 @end

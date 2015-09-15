@@ -12,7 +12,7 @@
 #import "JCAppDelegate.h"
 @interface FloorPlanBeaconRanging()
 
-@property (nonatomic) NSMutableDictionary *placesByBeacons;
+
 
 
 @end
@@ -24,9 +24,9 @@
 
     self=[super init];
     if(self){
-
+    
         JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
-            for (Area * area in appDelegate.areas) {
+        for (Area * area in appDelegate.areas) {
             self.placesByBeacons[area.minorBeaconId] = area;
             
         }

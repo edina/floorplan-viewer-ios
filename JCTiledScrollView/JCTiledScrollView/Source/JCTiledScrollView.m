@@ -413,7 +413,7 @@
             
             
             CGPoint locationInAnnotation = [gestureRecognizer locationInView:t.view];
-            if(CGRectContainsPoint(t.view.button.frame, locationInAnnotation)){
+            if(CGRectContainsPoint(t.view.button.frame, locationInAnnotation) || CGRectContainsPoint(t.view.imageButton.frame, locationInAnnotation)){
                 NSLog(@"test %f %f", locationInAnnotation.x,locationInAnnotation.y);
                 
                 

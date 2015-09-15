@@ -56,7 +56,7 @@
     }
     [cell.areaTitle setFont:[UIFont fontWithName:@"SourceSansPro-Regular" size:18]];
     
-    [cell.areaDetail setFont:[UIFont fontWithName:@"SourceSansPro-Regular" size:12]];
+    [cell.areaDetail setFont:[UIFont fontWithName:@"SourceSansPro-Regular" size:14]];
     
     JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
     Area *area = [appDelegate.areas objectAtIndex:indexPath.row];
@@ -105,45 +105,48 @@
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons
              inRegion:(CLBeaconRegion *)region {
     CLBeacon *nearestBeacon = beacons.firstObject;
+    
+    NSString *beaconKey = [NSString stringWithFormat:@"%@", nearestBeacon.minor];
+    NSLog(@"nearest beacon  %@", beaconKey);
     if (nearestBeacon) {
         Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
         // TODO: update the UI here
         NSLog(@"%@", area.title); // TODO: remove after implementing the UI
         //go to place on floorplan
         
-
-
+        
+        
         if (area) {
-
+            
             self.currentSelectedArea = area;
             if(!self.currentSelectedArea.hasVisited){
                 self.currentSelectedArea.hasVisited = YES;
                 // show popup here
                 
-                        UIAlertController *alertController = [UIAlertController
-                              alertControllerWithTitle:@"Detected Beacon"
-                              message:@"Message"
-                              preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction 
-            actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
-                      style:UIAlertActionStyleCancel
-                    handler:^(UIAlertAction *action)
-                    {
-                      NSLog(@"Cancel action");
-                    }];
-
-UIAlertAction *okAction = [UIAlertAction 
-            actionWithTitle:NSLocalizedString(@"OK", @"OK action")
-                      style:UIAlertActionStyleDefault
-                    handler:^(UIAlertAction *action)
-                    {
-                        [self performSegueWithIdentifier:@"floorplan" sender:area];
-                        NSLog(@"OK action");
-                    }];
-
-[alertController addAction:cancelAction];
-[alertController addAction:okAction];
-           [self presentViewController:alertController animated:YES completion:nil];
+                UIAlertController *alertController = [UIAlertController
+                                                      alertControllerWithTitle:@"Entered Region"
+                                                      message:area.title
+                                                      preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *cancelAction = [UIAlertAction
+                                               actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                                               style:UIAlertActionStyleCancel
+                                               handler:^(UIAlertAction *action)
+                                               {
+                                                   NSLog(@"Cancel action");
+                                               }];
+                
+                UIAlertAction *okAction = [UIAlertAction
+                                           actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                           style:UIAlertActionStyleDefault
+                                           handler:^(UIAlertAction *action)
+                                           {
+                                               [self performSegueWithIdentifier:@"floorplan" sender:area];
+                                               NSLog(@"OK action");
+                                           }];
+                
+                [alertController addAction:cancelAction];
+                [alertController addAction:okAction];
+                [self presentViewController:alertController animated:YES completion:nil];
                 
                 
             }
