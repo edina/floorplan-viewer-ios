@@ -108,7 +108,7 @@
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="910-ud-GAF">
                                     <rect key="frame" x="8" y="116" width="140" height="40"/>
-                                    <state key="normal" title="More Info">
+                                    <state key="normal" title="Watch Video">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                 </button>

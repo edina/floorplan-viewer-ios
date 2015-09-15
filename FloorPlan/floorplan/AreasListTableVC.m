@@ -21,37 +21,13 @@
 
 @implementation AreasListTableVC
 
-- (NSMutableArray*) areas
-{
-    if (!_areas){
-        _areas = [[NSMutableArray alloc] init];
-    }
-    return _areas;
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //sort areas key on beacon.
     self.floorPlanRanging = [JCAppDelegate appDelegate].floorPlanRanging;
-    
-    
-    
-    
-    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"areas_config" ofType:@"plist"];
-    NSArray *areas = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"areas"];
-    
-    for (NSDictionary *r in areas) {
-        
-        
-        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"beaconMinorId"] video:r[@"video"]];
-        
-        
-        [self.areas addObject:area];
-        
-    }
-    
-    
     
     
     self.navigationItem.title = @"Areas";
@@ -82,8 +58,8 @@
     
     [cell.areaDetail setFont:[UIFont fontWithName:@"SourceSansPro-Regular" size:12]];
     
-
-    Area *area = [self.areas objectAtIndex:indexPath.row];
+    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+    Area *area = [appDelegate.areas objectAtIndex:indexPath.row];
     cell.areaTitle.text = area.title;
     cell.areaImage.image = area.image;
     cell.areaDetail.text = area.desc;
@@ -101,7 +77,8 @@
         
         
         if(indexPath) {
-            activatedArea = [self.areas objectAtIndex:indexPath.row];
+            JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+            activatedArea = [appDelegate.areas objectAtIndex:indexPath.row];
             
         }
         
@@ -120,7 +97,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.areas count];
+    JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+    return [appDelegate.areas count];
 }
 
 
@@ -132,12 +110,42 @@
         // TODO: update the UI here
         NSLog(@"%@", area.title); // TODO: remove after implementing the UI
         //go to place on floorplan
+        
+
+
         if (area) {
 
             self.currentSelectedArea = area;
             if(!self.currentSelectedArea.hasVisited){
                 self.currentSelectedArea.hasVisited = YES;
-                [self performSegueWithIdentifier:@"floorplan" sender:area];
+                // show popup here
+                
+                        UIAlertController *alertController = [UIAlertController
+                              alertControllerWithTitle:@"Detected Beacon"
+                              message:@"Message"
+                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction 
+            actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                      style:UIAlertActionStyleCancel
+                    handler:^(UIAlertAction *action)
+                    {
+                      NSLog(@"Cancel action");
+                    }];
+
+UIAlertAction *okAction = [UIAlertAction 
+            actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                      style:UIAlertActionStyleDefault
+                    handler:^(UIAlertAction *action)
+                    {
+                        [self performSegueWithIdentifier:@"floorplan" sender:area];
+                        NSLog(@"OK action");
+                    }];
+
+[alertController addAction:cancelAction];
+[alertController addAction:okAction];
+           [self presentViewController:alertController animated:YES completion:nil];
+                
+                
             }
         }
         

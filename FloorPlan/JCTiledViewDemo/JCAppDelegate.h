@@ -12,6 +12,7 @@
 // 3. Add a property to hold the beacon manager
 @property (nonatomic) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) FloorPlanBeaconRanging *floorPlanRanging;
+@property(nonatomic, strong) NSMutableArray *areas;
 
 + (JCAppDelegate *)appDelegate;
 

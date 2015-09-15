@@ -53,7 +53,20 @@
     self.window.rootViewController = floorPlanVC;
     // 5. Call to show views
     [self.window makeKeyAndVisible];
+    self.areas = [[NSMutableArray alloc] init];
     
+    NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"areas_config" ofType:@"plist"];
+    NSArray *areas = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"areas"];
+    
+    for (NSDictionary *r in areas) {
+        
+        
+        Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"beaconMinorId"] video:r[@"video"]];
+        
+        
+        [self.areas addObject:area];
+        
+    }
     
     return YES;
 }

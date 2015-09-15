@@ -11,6 +11,6 @@
 @interface AreasListTableVC : UITableViewController
 
 
-@property(nonatomic, strong) NSMutableArray *areas;
+
 
 @end

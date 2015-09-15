@@ -9,7 +9,7 @@
 #import "FloorPlanBeaconRanging.h"
 #import "Area.h"
 #import <EstimoteSDK/EstimoteSDK.h>
-
+#import "JCAppDelegate.h"
 @interface FloorPlanBeaconRanging()
 
 @property (nonatomic) NSMutableDictionary *placesByBeacons;
@@ -22,19 +22,12 @@
 -(id)init{
 
 
-    
     self=[super init];
     if(self){
-        NSString *plistLocation = [[NSBundle mainBundle] pathForResource:@"areas_config" ofType:@"plist"];
-        NSArray *areas = [[NSDictionary alloc] initWithContentsOfFile:plistLocation][@"areas"];
-        
-        for (NSDictionary *r in areas) {
-            
-            
-            Area *area = [Area createAreaWithTitle:r[@"title"] description:r[@"description"] image:r[@"image"] location:r[@"location"] minorBeaconId:r[@"minorBeaconId"] video:r[@"video"]];
-            
+
+        JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
+            for (Area * area in appDelegate.areas) {
             self.placesByBeacons[area.minorBeaconId] = area;
-            
             
         }
     }

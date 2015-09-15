@@ -40,6 +40,7 @@
 
 #pragma mark - View lifecycle
 - (void)moveToArea:(Area *) area {
+    self.area = area;
     NSArray *coords = [area.location componentsSeparatedByString:@","];
     
     CGFloat x = [coords[0] doubleValue];
@@ -58,7 +59,7 @@
     a.contentPosition = CGPointMake(x,y );
     [self.scrollView addAnnotation:a];
     //self.scrollView.zoomScale = 6;
-    //[self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
+    [self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
     [self.scrollView moveToPointX:x andY:y atZoomLevel:6];
 }
 
@@ -254,8 +255,41 @@
         Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
         
         NSLog(@"%@", area.title); // TODO: remove after implementing the UI
-        if (area.hasVisited) {
-            [self moveToArea:area];
+        
+        NSLog(@"%@", self.area.title);
+        if (!area.hasVisited && self.area != area) {
+            area.hasVisited = YES;
+                            
+                        UIAlertController *alertController = [UIAlertController
+                              alertControllerWithTitle:@"Detected Beacon"
+                              message:@"Message"
+                              preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction 
+            actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                      style:UIAlertActionStyleCancel
+                    handler:^(UIAlertAction *action)
+                    {
+                      NSLog(@"Cancel action");
+                    }];
+
+UIAlertAction *okAction = [UIAlertAction 
+            actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                      style:UIAlertActionStyleDefault
+                    handler:^(UIAlertAction *action)
+                    {
+                        [self moveToArea:area];
+                        
+                        // Delay execution of my block for 10 seconds.
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 60 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    area.hasVisited = NO;
+});
+                        NSLog(@"OK action");
+                    }];
+
+[alertController addAction:cancelAction];
+[alertController addAction:okAction];
+ [self presentViewController:alertController animated:YES completion:nil];
+            
         }
         
     }
