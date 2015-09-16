@@ -95,6 +95,9 @@
 
 
 
+
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
@@ -116,9 +119,9 @@
         
         
         
-        if (area) {
+        if (area && area != [JCAppDelegate appDelegate].currentArea) {
             
-            self.currentSelectedArea = area;
+            [JCAppDelegate appDelegate].currentArea = area;
             if(!self.currentSelectedArea.hasVisited){
                 self.currentSelectedArea.hasVisited = YES;
                 // show popup here

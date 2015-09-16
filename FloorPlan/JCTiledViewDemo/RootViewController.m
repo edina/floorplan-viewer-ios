@@ -60,7 +60,7 @@
     [self.scrollView addAnnotation:a];
     //self.scrollView.zoomScale = 6;
     [self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
-    [self.scrollView moveToPointX:x andY:y atZoomLevel:6];
+    [self.scrollView moveToPointX:x andY:y atZoomLevel:3];
 }
 
 /*
@@ -76,12 +76,12 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
     
-
+    
+    
     //sort areas key on beacon.
     self.floorPlanRanging = [JCAppDelegate appDelegate].floorPlanRanging;
-
+    
     
     
     self.detailView = [[DetailView alloc] initWithFrame:CGRectZero];
@@ -92,7 +92,7 @@
     
     CGRect scrollView_frame = CGRectOffset(CGRectInset(self.view.bounds,0.,size_for_detail.height/2.0f),0.,size_for_detail.height/2.0f);
     
-
+    
     //Bitmap
     self.scrollView = [[JCTiledScrollView alloc] initWithFrame:scrollView_frame contentSize:GroundFloorImageSize];
     
@@ -110,12 +110,12 @@
     
     [self.view addSubview:self.scrollView];
     
-
+    
     
     [self tiledScrollViewDidZoom:self.scrollView]; //force the detailView to update the frist time
     
     [self moveToArea:self.area];
-   
+    
 }
 
 
@@ -142,21 +142,16 @@
     JCAppDelegate *appDelegate = [JCAppDelegate appDelegate];
     
     appDelegate.beaconManager.delegate = self;
-
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-   
+    
 }
 
-#pragma mark - Rotation
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
 
 #pragma mark - Responder
 
@@ -239,10 +234,10 @@
 
 - (void)tiledScrollView:(JCTiledScrollView *)scrollView didSelectAnnotationView:(JCAnnotationView *)view{
     NSLog(@" view %@", view );
-   
+    
     NSString *videoPath = [[NSBundle mainBundle] pathForResource:self.area.video ofType:@"mp4"];
     NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
-
+    
     MPMoviePlayerViewController *movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
     [self presentMoviePlayerViewControllerAnimated:movieController];
     [movieController.moviePlayer play];
@@ -254,44 +249,48 @@
     CLBeacon *nearestBeacon = beacons.firstObject;
     NSString *beaconKey = [NSString stringWithFormat:@"%@", nearestBeacon.minor];
     NSLog(@"nearest beacon  %@", beaconKey);
+    NSLog(@"RSSI  %ld", (long)nearestBeacon.rssi);
+    NSLog(@"accuracy  %f", nearestBeacon.accuracy);
+    NSLog(@"proximity  %ld", (long)nearestBeacon.proximity);
     if (nearestBeacon) {
         Area *area = [self.floorPlanRanging areaForBeacon:nearestBeacon];
         
         NSLog(@"%@", area.title); // TODO: remove after implementing the UI
         
         NSLog(@"%@", self.area.title);
-        if (area!= nil && !area.hasVisited && self.area != area) {
+        if (area!= nil && !area.hasVisited && area != [JCAppDelegate appDelegate].currentArea)  {
+            [JCAppDelegate appDelegate].currentArea = area;
             area.hasVisited = YES;
-                            
-                        UIAlertController *alertController = [UIAlertController
-                              alertControllerWithTitle:@"Entered Region"
-                              message:area.title
-                              preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction 
-            actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
-                      style:UIAlertActionStyleCancel
-                    handler:^(UIAlertAction *action)
-                    {
-                      NSLog(@"Cancel action");
-                    }];
-
-UIAlertAction *okAction = [UIAlertAction 
-            actionWithTitle:NSLocalizedString(@"OK", @"OK action")
-                      style:UIAlertActionStyleDefault
-                    handler:^(UIAlertAction *action)
-                    {
-                        
-                        
-                        // Delay execution of my block for 10 seconds.
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-    [self moveToArea:area];
-});
-                        NSLog(@"OK action");
-                    }];
-
-[alertController addAction:cancelAction];
-[alertController addAction:okAction];
- [self presentViewController:alertController animated:YES completion:nil];
+            
+            UIAlertController *alertController = [UIAlertController
+                                                  alertControllerWithTitle:@"Entered Region"
+                                                  message:area.title
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction
+                                           actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                                           style:UIAlertActionStyleCancel
+                                           handler:^(UIAlertAction *action)
+                                           {
+                                               NSLog(@"Cancel action");
+                                           }];
+            
+            UIAlertAction *okAction = [UIAlertAction
+                                       actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                           
+                                           
+                                           // Delay execution of my block for 10 seconds.
+                                           dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                                               [self moveToArea:area];
+                                           });
+                                           NSLog(@"OK action");
+                                       }];
+            
+            [alertController addAction:cancelAction];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
             
         }
         

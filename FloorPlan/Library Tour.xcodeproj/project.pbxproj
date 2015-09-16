@@ -108,7 +108,7 @@
 		7D74927D1B6676BC003FE464 /* image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_2.jpg; path = floorplan/images/image_2.jpg; sourceTree = "<group>"; };
 		7D7492821B667B03003FE464 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Area.h; path = floorplan/Area.h; sourceTree = "<group>"; };
 		7D7492831B667B03003FE464 /* Area.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Area.m; path = floorplan/Area.m; sourceTree = "<group>"; };
-		7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FloorPlanIOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCF8BD81B26E6F6005FA939 /* Library Tour Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Library Tour Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCF8BDB1B26E6F6005FA939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCF8BDC1B26E6F6005FA939 /* FloorPlan_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloorPlan_Tests.m; sourceTree = "<group>"; };
 		7DE76CEE1BA6CEFF00D34326 /* building_history_crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = building_history_crop.png; sourceTree = "<group>"; };
@@ -135,14 +135,14 @@
 		88197C0F1558C251005EF22F /* marker-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker-red.png"; sourceTree = "<group>"; };
 		882BCF7515A431CF00F0FC5E /* DemoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAnnotation.h; sourceTree = "<group>"; };
 		882BCF7615A431CF00F0FC5E /* DemoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAnnotation.m; sourceTree = "<group>"; };
-		887EE94114D8DC2D00AB0A92 /* FloorPlanIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloorPlanIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		887EE94114D8DC2D00AB0A92 /* Library Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Library Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887EE94514D8DC2D00AB0A92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		887EE94714D8DC2D00AB0A92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		887EE94914D8DC2D00AB0A92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		887EE94D14D8DC2D00AB0A92 /* FloorPlanIOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FloorPlanIOS-Info.plist"; sourceTree = "<group>"; };
+		887EE94D14D8DC2D00AB0A92 /* Library Tour-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Library Tour-Info.plist"; sourceTree = "<group>"; };
 		887EE94F14D8DC2D00AB0A92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		887EE95114D8DC2D00AB0A92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		887EE95314D8DC2D00AB0A92 /* FloorPlanIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FloorPlanIOS-Prefix.pch"; sourceTree = "<group>"; };
+		887EE95314D8DC2D00AB0A92 /* Library Tour-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Library Tour-Prefix.pch"; sourceTree = "<group>"; };
 		887EE95414D8DC2D00AB0A92 /* JCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCAppDelegate.h; sourceTree = "<group>"; };
 		887EE95514D8DC2D00AB0A92 /* JCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCAppDelegate.m; sourceTree = "<group>"; };
 		888630DD172938C600F8E5D4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -311,8 +311,8 @@
 		887EE94214D8DC2D00AB0A92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				887EE94114D8DC2D00AB0A92 /* FloorPlanIOS.app */,
-				7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */,
+				887EE94114D8DC2D00AB0A92 /* Library Tour.app */,
+				7DCF8BD81B26E6F6005FA939 /* Library Tour Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,10 +362,10 @@
 				88CD1A3714E2007F00B54AF0 /* Icon-72.png */,
 				88CD1A3814E2007F00B54AF0 /* Icon.png */,
 				88CD1A3914E2007F00B54AF0 /* Icon@2x.png */,
-				887EE94D14D8DC2D00AB0A92 /* FloorPlanIOS-Info.plist */,
+				887EE94D14D8DC2D00AB0A92 /* Library Tour-Info.plist */,
 				887EE94E14D8DC2D00AB0A92 /* InfoPlist.strings */,
 				887EE95114D8DC2D00AB0A92 /* main.m */,
-				887EE95314D8DC2D00AB0A92 /* FloorPlanIOS-Prefix.pch */,
+				887EE95314D8DC2D00AB0A92 /* Library Tour-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -373,9 +373,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DCF8BD71B26E6F6005FA939 /* FloorPlanIOS Tests */ = {
+		7DCF8BD71B26E6F6005FA939 /* Library Tour Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "FloorPlanIOS Tests" */;
+			buildConfigurationList = 7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "Library Tour Tests" */;
 			buildPhases = (
 				7DCF8BD41B26E6F6005FA939 /* Sources */,
 				7DCF8BD51B26E6F6005FA939 /* Frameworks */,
@@ -386,14 +386,14 @@
 			dependencies = (
 				7DCF8BDF1B26E6F6005FA939 /* PBXTargetDependency */,
 			);
-			name = "FloorPlanIOS Tests";
+			name = "Library Tour Tests";
 			productName = "FloorPlan Tests";
-			productReference = 7DCF8BD81B26E6F6005FA939 /* FloorPlanIOS Tests.xctest */;
+			productReference = 7DCF8BD81B26E6F6005FA939 /* Library Tour Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		887EE94014D8DC2D00AB0A92 /* FloorPlanIOS */ = {
+		887EE94014D8DC2D00AB0A92 /* Library Tour */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "FloorPlanIOS" */;
+			buildConfigurationList = 887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "Library Tour" */;
 			buildPhases = (
 				7DD54464D940AF1E5E4B8C6D /* Check Pods Manifest.lock */,
 				887EE93D14D8DC2D00AB0A92 /* Sources */,
@@ -405,9 +405,9 @@
 			);
 			dependencies = (
 			);
-			name = FloorPlanIOS;
+			name = "Library Tour";
 			productName = JCTiledViewDemo;
-			productReference = 887EE94114D8DC2D00AB0A92 /* FloorPlanIOS.app */;
+			productReference = 887EE94114D8DC2D00AB0A92 /* Library Tour.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -425,7 +425,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "FloorPlanIOS" */;
+			buildConfigurationList = 887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "Library Tour" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -443,8 +443,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				887EE94014D8DC2D00AB0A92 /* FloorPlanIOS */,
-				7DCF8BD71B26E6F6005FA939 /* FloorPlanIOS Tests */,
+				887EE94014D8DC2D00AB0A92 /* Library Tour */,
+				7DCF8BD71B26E6F6005FA939 /* Library Tour Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -576,7 +576,7 @@
 /* Begin PBXTargetDependency section */
 		7DCF8BDF1B26E6F6005FA939 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 887EE94014D8DC2D00AB0A92 /* FloorPlanIOS */;
+			target = 887EE94014D8DC2D00AB0A92 /* Library Tour */;
 			targetProxy = 7DCF8BDE1B26E6F6005FA939 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -623,7 +623,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "FloorPlanIOS Tests";
+				PRODUCT_NAME = "Library Tour Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlanIOS.app/FloorPlanIOS";
 			};
 			name = Debug;
@@ -656,7 +656,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "FloorPlanIOS Tests";
+				PRODUCT_NAME = "Library Tour Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorPlanIOS.app/FloorPlanIOS";
 			};
 			name = Release;
@@ -736,19 +736,20 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlanIOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "JCTiledViewDemo/Library Tour-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ANNOTATE_TILES,
 				);
-				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlanIOS-Info.plist";
+				INFOPLIST_FILE = "JCTiledViewDemo/Library Tour-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = FloorPlanIOS;
+				PRODUCT_NAME = "Library Tour";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -764,15 +765,16 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JCTiledViewDemo/FloorPlanIOS-Prefix.pch";
-				INFOPLIST_FILE = "JCTiledViewDemo/FloorPlanIOS-Info.plist";
+				GCC_PREFIX_HEADER = "JCTiledViewDemo/Library Tour-Prefix.pch";
+				INFOPLIST_FILE = "JCTiledViewDemo/Library Tour-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = FloorPlanIOS;
+				PRODUCT_NAME = "Library Tour";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -780,7 +782,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "FloorPlanIOS Tests" */ = {
+		7DCF8BE31B26E6F6005FA939 /* Build configuration list for PBXNativeTarget "Library Tour Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DCF8BE01B26E6F6005FA939 /* Debug */,
@@ -789,7 +791,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "FloorPlanIOS" */ = {
+		887EE93B14D8DC2D00AB0A92 /* Build configuration list for PBXProject "Library Tour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887EE95714D8DC2D00AB0A92 /* Debug */,
@@ -798,7 +800,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "FloorPlanIOS" */ = {
+		887EE95914D8DC2D00AB0A92 /* Build configuration list for PBXNativeTarget "Library Tour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887EE95A14D8DC2D00AB0A92 /* Debug */,
