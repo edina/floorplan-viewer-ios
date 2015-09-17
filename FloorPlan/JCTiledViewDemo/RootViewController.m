@@ -57,6 +57,7 @@
     
     id<JCAnnotation> a = [[DemoAnnotation alloc] init];
     a.contentPosition = CGPointMake(x,y );
+    [self.scrollView removeAllAnnotations];
     [self.scrollView addAnnotation:a];
     //self.scrollView.zoomScale = 6;
     [self.scrollView setContentCenter:CGPointMake(x, y) animated:YES];
