@@ -1,4 +1,8 @@
-Build documentation
+
+
+###Build documentation
+
+```shell
 
 $git clone https://github.com/edina/floorplan-viewer-ios.git
 
@@ -16,7 +20,7 @@ should get a similar output to this
 
 ### Installation Source
 
-
+```
 ```
 
 Executable Path: /usr/bin/pod
