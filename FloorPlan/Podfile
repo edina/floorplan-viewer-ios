@@ -1,4 +1,6 @@
 platform :ios, '7.0'
-pod 'EstimoteSDK'
+target "Library Tour" do
+   pod 'EstimoteSDK'
+end
 
 
