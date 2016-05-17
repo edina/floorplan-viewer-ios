@@ -9,23 +9,17 @@ $git clone https://github.com/edina/floorplan-viewer-ios.git
 $cd floorplan-viewer-ios/
 
 $cd FloorPlan/
+```
 
 Install the estimotes sdk via a CocoaPods install
 
 check your pod env
 
+```shell
 $pod env
-
-should get a similar output to this
-
-### Installation Source
-
-```
 ```
 
-Executable Path: /usr/bin/pod
-
-```
+Should expect to get a similar env output to the following...
 
 
 ### Plugins
@@ -62,19 +56,19 @@ target "Library Tour" do
 end
 
 ```
-
+```shell
 $pod install
+```
 
-
-ISSUES
+###ISSUES
 
 If there is a warning / error then comment this line out on
 
 in this file CTiledScrollView/JCTiledScrollView/Source/JCTiledScrollView.m
 
-
+```
 //[CATransaction setValue:(id) kCFBooleanTrue forKey:kCATransactionDisableActions];
-
+```
 
 
 
